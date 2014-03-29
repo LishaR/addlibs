@@ -24,19 +24,18 @@ $(document).ready(function() {
 function sendToStory() {
 	console.log($("#inputBox").val());
 	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
-					console.log("call function");
-					window.location.replace("/viewStory");
-
-					
-				});
-	//location.reload();
-	$("#story").text($("#story").text() + " " + 
-		$("#inputBox").val());
-	$("#inputBox").val("");
+		console.log("call function");
+		window.location.replace("/viewStory");
+	});
 }
 
 // Updates the character counter
 function updateCharacterCounter() {
 	var count = $("#inputBox").val().length;
 	$("#counter").text("" + count + " / 40");
+}
+
+// Links to the completed stories page
+function goToCompletedStories() {
+		window.location.replace("/viewCompletedStories");
 }

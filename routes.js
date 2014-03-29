@@ -7,6 +7,7 @@ exports = module.exports = function(app, passport) {
 	app.get('/', index.index);
 	app.get('/updateStory', story.updateStory);
 	app.get('/viewStory', story.viewStory);
+	app.get('/viewCompletedStories', story.viewCompletedStories);
 	
 	app.get('/create', story.createStory);
 	app.get('/testLast', story.testLast);

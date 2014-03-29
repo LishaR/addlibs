@@ -174,6 +174,14 @@ exports.viewStory = function(req, res) {
 	});
 };
 
+exports.viewCompletedStories = function(req, res) {
+	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
+		if(err) console.log(err);
+		var data = {};
+		res.render('finished_stories', { title: 'Home | AddLibs', data: data});
+	});
+};
+
 exports.createStory = function(req, res){
 	console.log("Started");
 	var story = new req.app.db.models.Story();
