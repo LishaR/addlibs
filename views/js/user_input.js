@@ -18,21 +18,23 @@ $(document).ready(function() {
 			sendToStory();
 		}
 	});
+
+	$("#homeButton").click(function(event) {
+		sendToHome();
+	});	
 });
+
+function sendToHome() {
+	$.get( "/", null, function(data) {
+		window.location.replace("/");
+	});
+} 
 
 // Appends inputBox text to story paragraph
 function sendToStory() {
-	console.log($("#inputBox").val());
 	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
-					console.log("call function");
-					window.location.replace("/viewStory");
-
-					
+					window.location.replace("/viewStory");					
 				});
-	//location.reload();
-	$("#story").text($("#story").text() + " " + 
-		$("#inputBox").val());
-	$("#inputBox").val("");
 }
 
 // Updates the character counter
