@@ -1,8 +1,9 @@
 $(document).ready(function() {
+	// Automatically puts cursor in inputBox
 	$("#inputBox").focus();
 
 	// Attaches send method to sendButton
-	$("#sendButton").click(function() {
+	$("#sendButton").click(function(event) {
 		sendToStory();
 	});
 
@@ -16,9 +17,11 @@ $(document).ready(function() {
 });
 
 // Appends inputBox text to story paragraph
-
-
 function sendToStory() {
+	console.log($("#inputBox").val());
+	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), function( data ) {				
+					//location.reload();
+				});
 	$("#story").text($("#story").text() + " " + 
 		$("#inputBox").val());
 	$("#inputBox").val("");

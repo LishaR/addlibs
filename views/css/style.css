@@ -8,7 +8,7 @@ body {
 	margin-right: auto;
 }
 
-#showStory {
+.story {
 	font-family:verdana;
 	padding-left:  20px;
 	padding-right: 20px;
