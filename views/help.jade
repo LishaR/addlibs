@@ -1,0 +1,84 @@
+extends layout
+
+block content
+	section#content
+		div
+			#c-slide.carousel.carousel-fade.slide.bg-white.dker(style='height: 530px;')
+				ol.carousel-indicators
+					li.active(data-target='#c-slide', data-slide-to='0')
+					li(data-target='#c-slide', data-slide-to='1')
+					li(data-target='#c-slide', data-slide-to='2')
+				.carousel-inner
+					.item.active.row
+						.text-center
+							img.animated.fadeInDownBig(src='images/twtst.png', style='margin-top: 125px;')
+						.text-center
+							h3.animated.fadeInUpBig
+								| the social stock market
+								br
+								| How trend-savvy are 
+								strong.text-black you?
+								br
+							p.hidden-xs.animated.fadeInUpBig
+								a.btn.btn-lg.btn-info.btn-rounded.btn-s-lg(href='/login', style="margin-top: 25px;") Sign Up!
+					.item.row
+						.col-xs-5.text-right
+							h1
+								br
+								br
+								| How can I get started?
+							img.animated.fadeInRightBig(src='images/hashtag.jpg')
+						.col-sm-6
+							h2.animated.fadeInLeftBig
+								strong.class
+									br
+									br
+									br
+									br
+									br
+									| Create 
+								span.font-thin
+									| an account,
+									br
+									br
+								strong.class Search 
+								span.font-thin
+									| for hashtags that you think will rise in popularity,
+									br
+									br
+									strong.class Buy 
+									span.font-thin
+										| shares!
+										br
+										br
+										br
+										br
+					.item.row
+						.col-xs-5.text-right
+							h1
+								br
+								br
+								| Then what?
+							img.animated.fadeInRightBig(src='images/sell.png')
+						.col-sm-6
+							h2.animated.fadeInLeftBig
+								strong.class
+									br
+									br
+									br
+									br
+									br
+									br
+									| Sell 
+								span.font-thin
+									| your hashtags when they rise in price!
+									br
+									br
+									br
+									br
+							p.hidden-xs.animated.fadeInUpBig
+								a.btn.btn-lg.btn-info.btn-rounded.btn-s-lg(href='/about') Learn More
+				a.left.carousel-control(href='#c-slide', data-slide='prev')
+					i.icon-angle-left
+				a.right.carousel-control(href='#c-slide', data-slide='next')
+					i.icon-angle-right

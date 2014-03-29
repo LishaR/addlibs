@@ -1,0 +1,12 @@
+{
+    "from": {
+    	"name": "Bucket",
+    	"address": "keshavdv@gmail.com"
+	},
+  	"credentials": {
+	    "user": "keshavdv@gmail.com",
+	    "password": "Pa$$w0rd1!",
+	    "host": "smtp.gmail.com",
+	    "ssl": true
+  }
+}

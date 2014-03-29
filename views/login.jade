@@ -1,0 +1,80 @@
+!!! 5
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title Login | TweetStreet
+		meta(name='description', content='app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='stylesheet', href='css/bootstrap.css', type='text/css')
+		link(rel='stylesheet', href='css/animate.css', type='text/css')
+		link(rel='stylesheet', href='css/font-awesome.min.css', type='text/css')
+		link(rel='stylesheet', href='css/font.css', type='text/css', cache='false')
+		link(rel='stylesheet', href='css/plugin.css', type='text/css')
+		link(rel='stylesheet', href='css/app.css', type='text/css')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+	body
+		
+
+		section#content.wrapper-md.animated.fadeInUp(style="padding-top:25px;background-color: rgb(71, 71, 71);")
+			a.nav-brand(href='index.html') 
+				img(src="/images/logo.png", style="max-height: 30px;")
+			.row.m-n
+				.col-md-4.col-md-offset-4.m-t-lg
+					section.panel
+						header.panel-heading.text-center Sign in
+						form.panel-body(method='post', action='/login')
+							span(style="color:#E03737;")= flasherror
+							span(style="color:#03C70A;")= flashsuccess
+							.form-group
+								label.control-label Username
+								input.form-control(name="username", placeholder='test@example.com')
+							.form-group
+								label.control-label Password
+								input#inputPassword.form-control(name="password", type='password', placeholder='Password')
+							.checkbox
+								label
+								input(type='checkbox')
+								| Keep me logged in
+							a.pull-right.m-t-xs(href='#')
+								small Forgot password?
+							button.btn.btn-info(type='submit') Sign in
+							.line.line-dashed
+							a.btn.btn-gplus.btn-block(href='/auth/google')
+								i.icon-google-plus.pull-left
+								| Sign in with Google
+							a.btn.btn-facebook.btn-block.m-b-sm(href='/auth/facebook')
+								i.icon-facebook.pull-left
+								| Sign in with Facebook
+							.line.line-dashed
+							p.text-muted.text-center
+								small Don't have an account?
+							a.btn.btn-white.btn-block(href='/register') Create an account
+	
+
+			footer#footer(style="color:white")
+				.text-center.padder.clearfix
+					p
+						small
+							span Web app framework based on Bootstrap
+							br
+							span &copy; 2013		
+		script(src='js/jquery.min.js')

@@ -1,0 +1,108 @@
+!!! 5
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title= title
+		meta(name='description', content='app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='stylesheet', href='css/bootstrap.css', type='text/css')
+		link(rel='stylesheet', href='css/animate.css', type='text/css')
+		link(rel='stylesheet', href='css/font-awesome.min.css', type='text/css')
+		link(rel='stylesheet', href='css/font.css', type='text/css', cache='false')
+		link(rel='stylesheet', href='css/plugin.css', type='text/css')
+		link(rel='stylesheet', href='css/app.css', type='text/css')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		//if lt IE 9
+			script(src='js/ie/respond.min.js', cache='false')
+			script(src='js/ie/html5.js', cache='false')
+			script(src='js/ie/fix.js', cache='false')
+		script(src='js/jquery.min.js')
+		block head
+			
+	body
+		section.hbox.stretch(style="position: fixed; top:0; left: 0;")	
+			section#content
+				section.vbox
+					header.header.bg-black.navbar.navbar-inverse
+						.collapse.navbar-collapse.pull-in
+							a.nav-brand.aside.pull-left(href=(user ? '/home' : '/'))
+								img(src='/images/logo.png')
+							ul.nav.navbar-nav.m-l-n
+								if(user)
+									li(class=(isHome ? 'active': ''))
+										a(href='/home') Home
+									li(class=(isProfile ? 'active': ''))
+										a(href='/profile') Profile
+								else
+									li(class=(isProfile ? 'active': ''))
+										a(href='/login') Play
+								li(class=(isLeaderboard ? 'active': ''))
+									a(href='/leaderboard') Leaderboard
+								li(class=(isAbout ? 'active': ''))
+									a(href='/about') About
+								
+							if(user)
+								form.navbar-form.navbar-left.m-t-sm(action='/stock', role='search', style="margin-left:15px;")
+									.form-group
+										.input-group.input-s
+											input.form-control.input-sm.no-border.bg-dark(type='text', name='q', placeholder='Search')
+											span.input-group-btn
+												button.btn.btn-sm.btn-info.btn-icon(type='submit')
+													i.icon-search
+							ul.nav.navbar-nav.navbar-right
+								if(user)							
+									li.dropdown
+										a.dropdown-toggle(href='#', data-toggle='dropdown')
+											span.thumb-sm.avatar.pull-left.m-t-n-xs.m-r-xs
+												img(src=user.image)
+											= user.name
+											b.caret
+										ul.dropdown-menu.animated.fadeInLeft											
+											li
+												a(href='logout') Logout
+								else
+									li
+										a(href='/login') Login
+										
+
+					section#pjax-container.scrollable
+						.wrapper(style="height:100%;")
+							block content
+			
+			script(src='js/jquery.min.js')
+			script(src='js/bootstrap.js')
+			script(src='js/charts/sparkline/jquery.sparkline.min.js')
+			script(src='js/app.js')
+			script(src='js/app.plugin.js')
+			script(src='js/app.data.js')
+			script(src='js/libs/jquery.pjax.js', cache='false')
+			script(src='js/charts/sparkline/jquery.sparkline.min.js')
+			script(src='js/charts/easypiechart/jquery.easy-pie-chart.js')
+			script(src='js/select2/select2.min.js', cache='false')
+			script(src='js/datatables/jquery.dataTables.min.js')
+			script(src='js/fuelux/fuelux.js')
+			script(src='js/libs/underscore-min.js')
+
+			script(src='js/charts/morris/raphael-min.js', cache='false')
+			script(src='js/charts/morris/morris.min.js', cache='false')			
+			script(src='js/charts/flot/jquery.flot.min.js', cache='false')
+			script(src='js/charts/flot/jquery.flot.tooltip.min.js', cache='false')
+			script(src='js/charts/flot/jquery.flot.resize.js', cache='false')
+			script(src='js/charts/flot/jquery.flot.orderBars.js', cache='false')
+			script(src='js/charts/flot/jquery.flot.pie.min.js', cache='false')			
+			script(src='js/charts/flot/jquery.flot.categories.js', cache='false')			
