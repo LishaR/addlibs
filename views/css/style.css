@@ -29,6 +29,15 @@ body {
 }
 
 #inputBox {
+	float: left;
 	width: 65ex;
 	color: #f00;
+}
+
+#title {
+	font-family:verdana;
+	padding:20px;
+	border-radius:10px;
+	border:10px solid #EE872A;
+	background-color:#CCFFFF;
 }
