@@ -144,7 +144,7 @@ exports.last = function(req, res) {
 		data.last = story.last;
 		console.log(req.session.story);
 		// var htmlSource = fs.readFileSync("index.html", "utf8");
-		// htmlSource.replace("{TITLE", req.session.story);
+		// htmlSource.replace("{TITLE", req.session.story); 
 		res.render('index', { title: 'Home | AddLibs', data: data});
 	});
 	console.log("Last finished");
@@ -169,6 +169,7 @@ exports.createStory = function(req, res){
 	story.last = req.query.part;
 	story.save(function(err, story){
 		if(err) console.log(err);
+		res.json(story);
 	});
 };
 
