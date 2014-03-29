@@ -166,7 +166,7 @@ exports.updateStory = function(req, res) {
 exports.viewStory = function(req, res) {
 	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 		if(err) console.log(err);
-		res.render('story', { title: 'Home | AddLibs', parts: story.parts});
+		res.render('yourFinishedStory', { title: 'Home | AddLibs', parts: story.parts});
 	});
 };
 

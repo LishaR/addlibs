@@ -23,9 +23,10 @@ $(document).ready(function() {
 // Appends inputBox text to story paragraph
 function sendToStory() {
 	console.log($("#inputBox").val());
-	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), function(data) {	
-					console.log("call function");			
-					//window.location.replace("/ViewStory");
+	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
+					console.log("call function");
+					window.location.replace("/viewStory");
+
 					
 				});
 	//location.reload();
