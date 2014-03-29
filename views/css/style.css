@@ -29,6 +29,7 @@ body {
 }
 
 #inputBox {
+	float: left;
 	width: 65ex;
 	color: #f00;
 }
