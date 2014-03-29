@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Blake Lawson"/>
+	<title>addlibs</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container" >
+		<div class="story" id="showStory">
+			<h2><%= data.title %> </h2>
+        	<p><strong>The story thus far:</strong></p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5"></div>
+			<div class="col-lg-2">
+				<button type="button" class="btn btn-primary" id="sendButton">Get New Story</button>
+			</div>
+			<div class="col-lg-5"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7"></div>
+			<div class="col-lg-3">
+				<p>Send me the final story!</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-7"></div>
+			<div class="col-lg-3">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Enter your email here">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-primary">Submit</button>
+					</span>
+				</div>
+			</div>
+			<div class="col-lg-4"></div>
+		</div>
+	</div>
+	
+
+	<script src="js/database.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

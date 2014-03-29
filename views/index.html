@@ -20,14 +20,23 @@
           and you're on to another story! Enter your email address at the beginning and all
           of the stories that you edit will be sent to you once they're complete.</h4>
       </div>
-      <div id="showStory" class="story">
+      <div class="story" id="showStory">
         <h2><%= data.title %> </h2>
         <p><strong>The story thus far:</strong></p>
         <p id="story"><%= data.last %></p>
       </div>
-      <div id="interactions" class="center">
-        <input id="inputBox" type="text" maxlength="40"/>
-        <button type="button" class="btn btn-primary" id="sendButton">Submit</button>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-4">
+            <div class="input-group">
+              <input type="text" id="inputBox" class="form-control" placeholder="Add to the story" maxlength="40">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary" id="sendButton">Submit</button>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
