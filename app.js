@@ -33,16 +33,6 @@ app.db.once('open', function () {
 app.use(express.static(__dirname + '/views/css/'));
 app.use(express.static(__dirname + '/views/js/'));
 
-// twitter
-var Twitter = require('node-twit');
-
-app.twitter = new Twitter.SearchClient(
-    't7wKGltr13Zo7XYOrWu6VQ',
-    '5vqcS29yzdX37aOKXwIQlf8cnUWJsY16KuwGvXl3NLw',
-    '511314106-x9D3QfPQbhUUn0a8VrFULqhOmC2ELJPtXQDC1Uov',
-    'TgVYnP8ByBagzWG4mxTfP8gqcRAsAbAkLXbHmeKILKqqh'
-);
-
 // Import data models
 require('./models')(app, mongoose);
 
@@ -99,8 +89,8 @@ if ('development' == app.get('env')) {
 
 // Import utilities and configure uri routing
 require('./utilities')(app);
- require('./lib/passport')(app, passport);
- require('./routes')(app, passport);
+// require('./lib/passport')(app, passport);
+ require('./routes')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

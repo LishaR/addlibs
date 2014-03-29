@@ -151,14 +151,15 @@ exports.last = function(req, res) {
 };
 
 exports.updateStory = function(req, res) {
+	console.log("updating");
 	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 		if(err) console.log(err);
 		story.parts.push(req.query.part);
 		story.last = req.query.part;
 		story.save(function(err, story){
 			if(err) console.log(err);
-
-		//	res.render('story', { title: 'Home | AddLibs', parts: story.parts});
+			console.log("finished update");
+			res.send('hi');
 		});
 	});
 };
