@@ -29,6 +29,10 @@ app.db.once('open', function () {
   console.log('mongoose open for business');
 });
 
+//includes the css/js files
+app.use(express.static(__dirname + '/views/css/'));
+app.use(express.static(__dirname + '/views/js/'));
+
 // twitter
 var Twitter = require('node-twit');
 
