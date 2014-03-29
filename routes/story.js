@@ -143,6 +143,13 @@ exports.createStory = function(req, res){
 	});
 };
 
+exports.last = function(req, res) {
+	req.app.db.models.Story.findOne({title: 'Title'}, function(err, story){
+		if(err) console.log(err);
+		req.story = story;
+	});
+};
+
 exports.sell = function(req, res){
  
 		if(!req.user) {
