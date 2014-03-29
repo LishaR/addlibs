@@ -1,0 +1,9 @@
+To do list:
+
+-Get everyone on GitHub
+-Get node.js onto Git
+-
+
+
+-Delegate tasks
+-Make some branches
