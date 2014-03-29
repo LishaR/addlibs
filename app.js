@@ -19,6 +19,10 @@ var config = konphyg.all();
 
 var app = express();
 
+//hopefully makes cookies
+app.use(express.cookieParser());
+app.use(express.session({secret: ':)'}));
+
 //mongo uri
 app.set('mongodb-uri', process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://guest:guest@ds045147.mongolab.com:45147/addlibs');
 

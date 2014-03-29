@@ -6,6 +6,7 @@ exports = module.exports = function(app, passport) {
 	//front end
 	app.get('/', require('./routes/index').index);
 	app.get('/create', story.createStory);
+	app.get('/testLast', story.testLast);
 
 	// app.param('resource', resource.resource);
 	

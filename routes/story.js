@@ -150,10 +150,15 @@ exports.last = function(req, res) {
 	console.log("hey");
 	req.app.db.models.Story.findOne({title: 'Title'}, function(err, story){
 		if(err) console.log(err);
-		req.story = story;
+		req.session.story = "hey";
+		console.log(req.session.story);
 	});
 	console.log("Last finished");
 };
+
+exports.testLast = function(req, res) {
+	console.log(req.session.story);
+}
 
 exports.sell = function(req, res){
  
