@@ -8,7 +8,7 @@ $(document).ready(function() {
 	});
 
 	// Each time a key is pressed...
-	$("#inputBox").keypress(function(event) {
+	$("#inputBox").keyup(function(event) {
 		// Updates the character count
 		updateCharacterCounter();
 
@@ -37,5 +37,5 @@ function sendToStory() {
 // Updates the character counter
 function updateCharacterCounter() {
 	var count = $("#inputBox").val().length;
-	$("#counter").text("" + count);
+	$("#counter").text("" + count + " / 40");
 }
