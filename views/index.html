@@ -9,6 +9,18 @@
 </head>
 <body>
 
+  <!-- The Navbar -->
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div id="navbarDiv" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-brand" href="#">AddLibs</a></li>
+          <li><a href="#">Create-a-Story</a></li>
+          <li><a href="#">View Completed Stories</a></li>
+      </div>
+    </div>
+  </nav>
+
   <div class="jumbotron">
     <div class="container">
       <div id="title">
@@ -32,6 +44,7 @@
             <div class="input-group">
               <input type="text" id="inputBox" class="form-control" placeholder="Add to the story" maxlength="40">
               <span class="input-group-btn"><button type="button" class="btn btn-primary" id="sendButton">Submit</button></span>
+              <p id="counter"> 0 / 40 </p>
             </div>
           </div>
         </div>

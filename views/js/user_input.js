@@ -7,8 +7,12 @@ $(document).ready(function() {
 		sendToStory();
 	});
 
-	// Sends to story when ENTER button is clicked
-	$("#inputBox").keypress(function(event){
+	// Each time a key is pressed...
+	$("#inputBox").keyup(function(event) {
+		// Updates the character count
+		updateCharacterCounter();
+
+		// Sends to story when ENTER button is clicked
 		var key = event.keyCode || event.which;
 		if (key == 13) {
 			sendToStory();
@@ -27,4 +31,10 @@ function sendToStory() {
 	$("#story").text($("#story").text() + " " + 
 		$("#inputBox").val());
 	$("#inputBox").val("");
+}
+
+// Updates the character counter
+function updateCharacterCounter() {
+	var count = $("#inputBox").val().length;
+	$("#counter").text("" + count + " / 40");
 }
