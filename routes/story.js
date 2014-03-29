@@ -133,34 +133,44 @@ exports.logout = function(req, res){
 	res.redirect('/');
 };
 
-exports.createStory = function(req, res){
-	console.log("Started");
-	var story = new req.app.db.models.Story();
-	story.title = "Title";
-	console.log(story.title);
-	story.parts.push("Story!");
-	story.last = "Last";
-	story.save(function(err, story){
-		if(err) console.log(err);
-	});
-	console.log("finished");
-};
-
 exports.last = function(req, res) {
 	console.log("last started");
 	req.app.db.models.Story.findOne({title: 'Title'}, function(err, story){
 		if(err) console.log(err);
-		req.session.story = "unicorns";
+		req.session.storyID = story._id;
 		req.session.save();
 		var data = {};
 		data.title = story.title;
 		data.last = story.last;
 		console.log(req.session.story);
 		// var htmlSource = fs.readFileSync("index.html", "utf8");
-		// htmlSource.replace("{TITLE", req.session.story);
+		// htmlSource.replace("{TITLE", req.session.story); 
 		res.render('index', { title: 'Home | AddLibs', data: data});
 	});
 	console.log("Last finished");
+};
+
+exports.updateStory = function(req, res) {
+	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
+		if(err) console.log(err);
+		story.parts.push(req.query.part);
+		story.last = req.query.part;
+		story.save(function(err, story){
+			if(err) console.log(err);
+		});
+	});
+};
+
+exports.createStory = function(req, res){
+	console.log("Started");
+	var story = new req.app.db.models.Story();
+	story.title = req.query.title;
+	story.parts.push(req.query.part);
+	story.last = req.query.part;
+	story.save(function(err, story){
+		if(err) console.log(err);
+		res.json(story);
+	});
 };
 
 exports.testLast = function(req, res) {
