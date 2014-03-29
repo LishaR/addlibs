@@ -18,13 +18,13 @@ $(document).ready(function() {
 
 // Appends inputBox text to story paragraph
 function sendToStory() {
-	var inputVal = $("#inputBox").val();
-	console.log(inputVal);
-	$.get( "/updateStory" + '?part=' + inputVal, null,
-		function(data) {
-			location.replace("/viewStory");		
-		}
-	);
+	console.log($("#inputBox").val());
+	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
+					console.log("call function");
+					window.location.replace("/viewStory");
+
+					
+				});
 	//location.reload();
 	$("#story").text($("#story").text() + " " + 
 		$("#inputBox").val());
