@@ -5,6 +5,7 @@ Authors
 ==========================
 Blake Lawson
 David Gilhooley
+Lance Goodridge
 
 About
 ===
