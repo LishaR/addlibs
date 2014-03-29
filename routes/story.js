@@ -134,20 +134,25 @@ exports.logout = function(req, res){
 };
 
 exports.createStory = function(req, res){
+	console.log("Started");
 	var story = new req.app.db.models.Story();
 	story.title = "Title";
+	console.log(story.title);
 	story.parts.push("Story!");
 	story.last = "Last";
 	story.save(function(err, story){
 		if(err) console.log(err);
 	});
+	console.log("finished");
 };
 
 exports.last = function(req, res) {
+	console.log("hey");
 	req.app.db.models.Story.findOne({title: 'Title'}, function(err, story){
 		if(err) console.log(err);
 		req.story = story;
 	});
+	console.log("Last finished");
 };
 
 exports.sell = function(req, res){
