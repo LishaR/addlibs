@@ -2,8 +2,10 @@ function displayAlert() {
 	alert("Hey! Its an alert");
 }
 
-function sendToStory() {
-	$("#story").text($("#showStory #story").text() + " " + 
-		$("#inputBox").val());
-	$("#inputBox").val("");
-}
+$(document).ready(function() {
+	$(sendButton).click(function() {
+		$("#story").text($("#showStory #story").text() + " " + 
+			$("#inputBox").val());
+		$("#inputBox").val("");
+	});
+});
