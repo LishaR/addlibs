@@ -16,12 +16,12 @@
 					<h2><%= data.title %> </h2>
 				</div>
 				<div class="col-lg-3">
-					<button type="button" class="btn btn-primary" id="sendButton">Get New Story</button>
+					<button type="button" class="btn btn-primary" id="homeButton">Get New Story</button>
 				</div>
 			</div>
     		<p>
     			<strong>The story thus far:</strong>
-    			<p><%= data.story %></p>
+    			<p><%= data.parts %></p>
     		</p>
 		</div>
 	</div>
@@ -45,10 +45,10 @@
 			<div class="col-lg-4"></div>
 		</div>
 	</div>
-	
 
-	<script src="database.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   	<script src="bootstrap.min.js"></script>
+  	<script src="user_input.js"></script>
+	<script src="database.js"></script>
 </body>
 </html>

@@ -20,6 +20,14 @@ body {
 	background-color:#CCFFFF;
 }
 
+#title {
+	font-family:verdana;
+	padding:20px;
+	border-radius:10px;
+	border:10px solid #EE872A;
+	background-color:#CCFFFF;
+}
+
 #showStory h2 {
 	text-align: center;
 }
@@ -34,10 +42,6 @@ body {
 	color: #f00;
 }
 
-#title {
-	font-family:verdana;
-	padding:20px;
-	border-radius:10px;
-	border:10px solid #EE872A;
-	background-color:#CCFFFF;
+#counter {
+	text-align: center;
 }
