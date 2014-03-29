@@ -20,8 +20,9 @@ $(document).ready(function() {
 function sendToStory() {
 	console.log($("#inputBox").val());
 	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
-					console.log("call function");			
+					console.log("call function");
 					window.location.replace("/viewStory");
+
 					
 				});
 	//location.reload();
