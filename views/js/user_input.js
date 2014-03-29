@@ -22,8 +22,6 @@ function sendToStory() {
 	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
 					console.log("call function");
 					window.location.replace("/viewStory");
-
-					
 				});
 	//location.reload();
 	$("#story").text($("#story").text() + " " + 
