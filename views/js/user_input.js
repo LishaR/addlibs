@@ -37,5 +37,5 @@ function updateCharacterCounter() {
 
 // Links to the completed stories page
 function goToCompletedStories() {
-		window.location.replace("/viewCompletedStories");
+	window.location.replace("/viewCompletedStories");
 }
