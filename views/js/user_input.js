@@ -16,8 +16,6 @@ $(document).ready(function() {
 });
 
 // Appends inputBox text to story paragraph
-
-
 function sendToStory() {
 	$("#story").text($("#story").text() + " " + 
 		$("#inputBox").val());
