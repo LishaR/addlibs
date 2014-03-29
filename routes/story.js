@@ -157,7 +157,16 @@ exports.updateStory = function(req, res) {
 		story.last = req.query.part;
 		story.save(function(err, story){
 			if(err) console.log(err);
+
+		//	res.render('story', { title: 'Home | AddLibs', parts: story.parts});
 		});
+	});
+};
+
+exports.viewStory = function(req, res) {
+	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
+		if(err) console.log(err);
+		res.render('story', { title: 'Home | AddLibs', parts: story.parts});
 	});
 };
 
