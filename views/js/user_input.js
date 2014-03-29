@@ -1,6 +1,10 @@
 // Set focus on inputBox
 $(document).ready(function() {
 	$("#inputBox").focus();
+
+	$("#sendButton").click(function() {
+		sendToStory();
+	});
 });
 
 // Call sendToStory when ENTER is pressed
@@ -12,6 +16,8 @@ $(document).keypress(function(event){
 });
 
 // Appends inputBox text to story paragraph
+
+
 function sendToStory() {
 	$("#story").text($("#story").text() + " " + 
 		$("#inputBox").val());
