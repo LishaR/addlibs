@@ -45,7 +45,15 @@ require('./models')(app, mongoose);
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+// app.set('view engine', 'jade');
+// app.engine('html', require('jade').__express);
+
+var engines = require('consolidate');
+
+app.set('views', __dirname + '/views');
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
+
 app.use(express.logger('dev'));
 app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 app.use(express.cookieParser());
