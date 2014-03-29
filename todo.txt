@@ -2,8 +2,12 @@ To do list:
 
 -Get everyone on GitHub
 -Get node.js onto Git
--
 
+-Create homepage
+-Function to start story
+-Function to add to story
+-Database setup
+-Get story from database
 
 -Delegate tasks
 -Make some branches
