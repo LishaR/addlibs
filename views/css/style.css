@@ -3,9 +3,23 @@ body {
 }
 
 #showStory {
-	height: 300px;
-	width:  300px;
-	background-color: yellow;
+	font-family:verdana;
+	padding-left:  20px;
+	padding-right: 20px;
+	padding-bottom:20px;
+	border-left:   10px solid #EE872A;;
+	border-right:  10px solid #EE872A;;
+	border-bottom: 10px solid #EE872A;;
+	border-radius: 10px;
+	background-color:#CCFFFF;
+}
+
+#showStory h2 {
+	text-align: center;
+}
+
+#showStory p {
+	text-align: left;
 }
 
 #inputBox {
