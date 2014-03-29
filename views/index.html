@@ -21,9 +21,9 @@
           of the stories that you edit will be sent to you once they're complete.</h4>
       </div>
       <div id="showStory">
-        <h2><%= req.session.story %> </h2>
+        <h2><%= data.title %> </h2>
         <p><strong>The story thus far:</strong></p>
-        <p id="story">This is where the story will go.</p>
+        <p id="story"><%= data.last %></p>
       </div>
       <div id="interactions" class="center">
         <input id="inputBox" type="text" maxlength="40"/>
