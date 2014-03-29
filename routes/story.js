@@ -147,11 +147,15 @@ exports.createStory = function(req, res){
 };
 
 exports.last = function(req, res) {
-	console.log("hey");
+	console.log("last started");
 	req.app.db.models.Story.findOne({title: 'Title'}, function(err, story){
 		if(err) console.log(err);
-		req.session.story = "hey";
+		req.session.story = "unicorns";
+		req.session.save();
 		console.log(req.session.story);
+		// var htmlSource = fs.readFileSync("index.html", "utf8");
+		// htmlSource.replace("{TITLE", req.session.story);
+		res.render('index', { title: 'Home | AddLibs', req: req});
 	});
 	console.log("Last finished");
 };
