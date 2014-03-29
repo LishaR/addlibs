@@ -1,0 +1,14 @@
+body {
+	background-color: #6699FF;
+}
+
+#showStory {
+	height: 300px;
+	width:  300px;
+	background-color: yellow;
+}
+
+#inputBox {
+	width: 65ex;
+	color: #f00;
+}
