@@ -4,10 +4,11 @@
   <meta charset="utf-8"/>
   <meta name="author" content="Blake Lawson, Lance Goodridge, Ben Leizman"/>
   <title>addlibs</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
   <div class="jumbotron">
     <div class="container">
       <div id="title">
@@ -20,7 +21,7 @@
           of the stories that you edit will be sent to you once they're complete.</h4>
       </div>
       <div id="showStory">
-        <h2>This is where the title will go.</h2>
+        <h2><%= req.session.story %> </h2>
         <p><strong>The story thus far:</strong></p>
         <p id="story">This is where the story will go.</p>
       </div>
@@ -32,7 +33,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="../bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-  <script src="js/user_input.js"></script> 
+  <script src="bootstrap.min.js"></script>
+  <script src="user_input.js"></script> 
 </body>
 </html>

@@ -19,10 +19,6 @@ var config = konphyg.all();
 
 var app = express();
 
-//hopefully makes cookies
-app.use(express.cookieParser());
-app.use(express.session({secret: ':)'}));
-
 //mongo uri
 app.set('mongodb-uri', process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://guest:guest@ds045147.mongolab.com:45147/addlibs');
 
@@ -32,6 +28,10 @@ app.db.on('error', console.error.bind(console, 'mongoose connection error: '));
 app.db.once('open', function () {
   console.log('mongoose open for business');
 });
+
+//includes the css/js files
+app.use(express.static(__dirname + '/views/css/'));
+app.use(express.static(__dirname + '/views/js/'));
 
 // twitter
 var Twitter = require('node-twit');
@@ -55,7 +55,7 @@ app.set('views', __dirname + '/views');
 var engines = require('consolidate');
 
 app.set('views', __dirname + '/views');
-app.engine('html', engines.mustache);
+app.engine('html', engines.ejs);
 app.set('view engine', 'html');
 
 app.use(express.logger('dev'));
@@ -68,8 +68,8 @@ app.use(express.session({
 	store: new MongoStore(config.db)
 }));
 app.use(express.methodOverride());
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 app.use(express.methodOverride());
 app.use(function(req, res, next){
   if(req.user){
@@ -99,8 +99,8 @@ if ('development' == app.get('env')) {
 
 // Import utilities and configure uri routing
 require('./utilities')(app);
-require('./lib/passport')(app, passport);
-require('./routes')(app, passport);
+ require('./lib/passport')(app, passport);
+ require('./routes')(app, passport);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

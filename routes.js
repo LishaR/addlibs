@@ -4,7 +4,7 @@ exports = module.exports = function(app, passport) {
 	, story = require('./routes/story');
 
 	//front end
-	app.get('/', require('./routes/index').index);
+	app.get('/', index.index);
 	app.get('/create', story.createStory);
 	app.get('/testLast', story.testLast);
 
