@@ -20,7 +20,7 @@ var config = konphyg.all();
 var app = express();
 
 //mongo uri
-app.set('mongodb-uri', process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://twit:twit@ds053798.mongolab.com:53798/hackprinceton');
+app.set('mongodb-uri', process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://guest:guest@ds045147.mongolab.com:45147/addlibs');
 
 //setup mongoose
 app.db = mongoose.createConnection(app.get('mongodb-uri'));

@@ -4,31 +4,33 @@
   <meta charset="utf-8"/>
   <meta name="author" content="Blake Lawson, Lance Goodridge, Ben Leizman"/>
   <title>addlibs</title>
-  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-  <script type="text/javascript">google.load("jquery", "1.3.2");</script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="js/user_input.js"></script>
-  <script src="js/jQueryTest.js"></script>
+  <link href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <!-- The page title -->
-    <div style="font-family:verdana;padding:20px;border-radius:10px;border:10px solid #EE872A;background-color:#CCFFFF">
-    <h1>AddLibs</h1>
-    <h2><i>Fun, whimsical storytelling from around the internet!</i></h2>
-    <h4>See the last few words of the story and add a few more! But remember, you
-      only have 20 characters, so use them wisely. Then press Submit
-      and you're on to another story! Enter your email address at the beginning and all
-      of the stories that you edit will be sent to you once they're complete.</h4>
+  <div class="container">
+    <div id="title">
+      <!-- The page title -->
+      <h1>AddLibs</h1>
+      <h2><i>Fun, whimsical storytelling from around the internet!</i></h2>
+      <h4>See the last few words of the story and add a few more! But remember, you
+        only have 20 characters, so use them wisely. Then press Submit
+        and you're on to another story! Enter your email address at the beginning and all
+        of the stories that you edit will be sent to you once they're complete.</h4>
+    </div>
+    <div id="showStory">
+      <h2>This is where the title will go.</h2>
+      <p><strong>The story thus far:</strong></p>
+      <p id="story">This is where the story will go.</p>
+    </div>
+    <div id="interactions" class="center">
+      <input id="inputBox" type="text" maxlength="40"/>
+      <input id="sendButton" type="button" value="Send"/>
+    </div>
   </div>
-  <div id="showStory">
-    <h2>This is where the title will go.</h2>
-    <p><strong>The story thus far:</strong></p>
-    <p id="story">This is where the story will go.</p>
-  </div>
-  <div id="interactions" class="center">
-    <input id="inputBox" type="text" maxlength="40"/>
-    <input id="sendButton" type="button" value="Send" onclick="sendToStory()"/>
-  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="js/user_input.js"></script> 
 </body>
 </html>

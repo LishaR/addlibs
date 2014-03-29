@@ -17,8 +17,3 @@ function sendToStory() {
 		$("#inputBox").val());
 	$("#inputBox").val("");
 }
-
-// A test method for displaying an alert
-function displayAlert() {
-	alert("Hey! Its an alert");
-}
