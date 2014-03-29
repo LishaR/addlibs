@@ -19,10 +19,12 @@ $(document).ready(function() {
 // Appends inputBox text to story paragraph
 function sendToStory() {
 	console.log($("#inputBox").val());
-	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), function( data ) {				
-					location.replace("/viewStory");
-					//location.reload();
+	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), function(data) {	
+					console.log("call function");			
+					//location.replace("/viewStory");
+					
 				});
+	//location.reload();
 	$("#story").text($("#story").text() + " " + 
 		$("#inputBox").val());
 	$("#inputBox").val("");
