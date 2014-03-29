@@ -169,6 +169,7 @@ exports.createStory = function(req, res){
 	story.last = req.query.part;
 	story.save(function(err, story){
 		if(err) console.log(err);
+		res.json(story);
 	});
 };
 
