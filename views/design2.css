@@ -8,11 +8,11 @@ h1 {
 	background: white;
 	margin-left: auto;
 	margin-right: auto;
-	border-bottom: 8px;
+	/*border-bottom: 8px;
 	border-right: 4px;
 	border-left: 4px;
 	border-style: solid;
-	border-color: rgb(95, 95, 95);
+	border-color: rgb(95, 95, 95); */
 	margin-bottom: 15px;
 }
 .content {
@@ -20,22 +20,26 @@ h1 {
 	background: rgb(255, 255, 255);
 	/* border: 10px; */
 	
-	border-right: 10px;
+/*	border-right: 10px;
 	border-bottom: 10px;
 	border-style: solid;
-	border-color: rgb(95, 95, 95);
-	width: 70%;
+	border-color: rgb(95, 95, 95); */
+	width: 60%;
+	margin-bottom: 0px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 50px;
+	padding-bottom: 60px;
 }
 
 .text {
-	width: 70%;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 30px;
 	text-align: center;
 	font-family: Lusitana;
-	font-size: 80px;
+	font-size: 60px;
 }
 
 .title {
@@ -45,13 +49,18 @@ h1 {
 	text-align: center;
 }
 .form {
-	width: 80%;
+	width: 70%;
 	font-family: Lusitana;
-	font-size: 50px;
+	font-size: 35px;
 	/* border-style: solid; */
-	border: 5px;
+/*	border: 5px;
 	border-color: rgb(83, 80, 111);
-	border-style: solid;
-	padding-left: 30px;
-	margin-left: 20px;
+	border-style: solid; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }
+
+.button {
+	width: 100px; height: 40px; color: white; shadow: none; border: none;
+} 
