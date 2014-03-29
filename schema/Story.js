@@ -4,6 +4,7 @@ exports = module.exports = function(app, mongoose) {
 			title: String,
 			parts: [String],
 			last: String,
+			created: {type: Date, default: Date.now}
 		});
 	 
 	app.db.model('Story', storySchema);

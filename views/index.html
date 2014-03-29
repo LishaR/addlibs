@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <meta name="author" content="Blake Lawson, Lance Goodridge, Ben Leizman">
+  <meta charset="utf-8"/>
+  <meta name="author" content="Blake Lawson, Lance Goodridge, Ben Leizman"/>
   <title>addlibs</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="user_input.js"></script>
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/user_input.js"></script>
+  <script src="js/jQueryTest.js"></script>
 </head>
 <body>
   <div>
@@ -16,12 +21,13 @@
       and you're on to another story! Enter your email address at the beginning and all
       of the stories that you edit will be sent to you once they're complete.</h4>
   </div>
-  <div>
-    <!-- The title of the story
-	 The last 20 characters of the story so far -->
+  <div id="showStory">
+    <h1>Some Text</h1>
+    <p id="story">try changing text to see if this is actually updating</p>
   </div>
   <div id="interactions" class="center">
     <input id="inputBox" type="text" maxlength="40"/>
-    <input id="sendButton" type="button" value="Send" onclick="displayAlert()"/>
+    <input id="sendButton" type="button" value="Send" onclick="sendToStory()"/>
   </div>
 </body>
+</html>
