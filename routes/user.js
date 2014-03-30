@@ -262,12 +262,8 @@ exports.sell = function(req, res){
 					}
 				})	
 			});
-		});
-		
-		
+		});	
 	});
-	
-
 };
 
 exports.history = function(req, res){
@@ -316,7 +312,6 @@ exports.profile = function(req, res){
 							prices.push({name: item.name, price: price});
 							callback(null);							
 						});
-						
 					}
 			,			
 			function(err){
@@ -327,8 +322,6 @@ exports.profile = function(req, res){
 				console.log(data);
 				res.render('profile', { title: 'Profile | TweetStreet', data: data, isProfile: true});
 			});
-
-			
 		}
 	})	
 };
