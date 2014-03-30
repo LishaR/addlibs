@@ -12,6 +12,11 @@ $(document).ready(function() {
 		sendToHome();
 	});
 
+	// Links to archive when archive button is clicked
+	$("#archiveButton").click(function(event) {
+		goToCompletedStories();
+	});
+
 	// Each time a key is pressed...
 	$("#inputBox").keyup(function(event) {
 		// Updates the character count
