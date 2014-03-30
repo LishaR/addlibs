@@ -83,11 +83,17 @@ exports.viewStory = function(req, res) {
 };
 
 exports.archive = function(req, res) {
-	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
-		if(err) console.log(err);
-		var data = {};
-		res.render('archive', { title: 'Home | AddLibs', data: data});
+	var data = {};
+	data.stories = new Array();
+	req.app.db.models.Story.find({}, function(err, story) {
+		if (err) {
+
+		} else {
+			data.stories = story;
+			res.render('archive', { title: 'Home | AddLibs', data: data});
+		}
 	});
+	
 };
 
 exports.createStory = function(req, res){

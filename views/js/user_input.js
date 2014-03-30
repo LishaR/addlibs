@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	// Automatically puts cursor in inputBox
 	$("#inputBox").focus();
+	$("#titleBox").focus();
 
 	// Attaches send method to sendButton
 	$("#sendButton").click(function(event) {
