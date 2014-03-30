@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 body {
 	background: rgb(122, 204, 207);
 }
@@ -5,46 +9,36 @@ body {
 h1 {
 	font-family: 'Share Tech Mono';
 	font-size: 80px;
-	text-align:center; 
-	color: white; 
+	text-align: center; 
+	color: white;
 	margin-bottom: 0px;
 }
 
 h2 {
 	font-family: Lusitana; 
 	font-size: 40px;
-	margin-bottom:10px; 
-	margin-top:5px;
-}
-
-.name {
-	width: 65%;
-	background: white;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 15px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 .content {
-	background: rgb(207, 180, 122);
-	background: rgb(255, 255, 255);
+	background: white;
 	width: 60%;
-	margin-bottom: 0px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 50px;
-	padding-bottom: 60px;
 }
 
 .text {
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 30px;
+	width: 80%;
 	text-align: center;
 	font-family: Lusitana;
 	font-size: 60px;
-	word-wrap:break-word;
+	word-wrap: break-word;
+	margin-bottom: 30px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .title {
@@ -53,7 +47,7 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	word-wrap:break-word;
+	word-wrap: break-word;
 }
 
 .story {
@@ -69,7 +63,7 @@ h2 {
 }
 
 .form {
-	width: 80%;
+	width: 75%;
 	font-family: Lusitana;
 	font-size: 35px;
 	margin-left: auto;
@@ -80,17 +74,16 @@ h2 {
 .forms {
 	display: inline-block;
 	width: 100%;
-	text-align: left;
+	text-align: center;
 }
 
 .counter {
 	font-size: 22px;
-	color: rgb(145, 27, 27);
+	color: black;
 	display: inline-block;
 	font-family: Lusitana;
 	font-weight: bold;
 	width: 70px;
-	padding-left: 5px;
 }
 
 .empty {
@@ -101,9 +94,11 @@ h2 {
 }
 
 .archive {
-	padding-left: 40px;
+	width: 90%;
 	font-family: Lusitana;
 	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .archive a {

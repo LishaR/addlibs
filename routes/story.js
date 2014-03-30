@@ -15,9 +15,7 @@ var server = oauthorize.createServer();
  */
 
 exports.checkStory = function(req, res) {
-	console.log("checking");
 	if (req.session.storyID) {
-		console.log("unlocking");
 		req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 			story.locked = false;
 			story.save(function(err, story){
@@ -45,30 +43,27 @@ getStory = function(req, res) {
 			data.last = story.last;
 			story.save(function(err, story){
 				if(err) console.log(err);
-				res.render('index', { title: 'Home | AddLibs', data: data});
+				res.render('index', {data: data});
 			});
 		}
 	});
 };
 
 exports.updateStory = function(req, res) {
-	console.log("updating");
 	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 		if(err) console.log(err);
-		story.parts.push(req.query.part + " ");
+		story.parts.push(" " + req.query.part);
 		story.last = req.query.part;
 		story.locked = false;
 		story.save(function(err, story){
 			if(err) console.log(err);
-			console.log("finished update");
 			res.json(story);
 		});
 	});
 };
 
 exports.newStory = function(req, res) {
-		var data = {};
-		res.render('newstory', { title:  'Home | AddLibs', data: data});
+		res.render('newstory');
 };
 
 exports.viewStory = function(req, res) {
@@ -77,7 +72,7 @@ exports.viewStory = function(req, res) {
 		var data = {};
 		data.parts = story.parts;
 		data.title = story.title;
-		res.render('yourFinishedStory', { title: 'Home | AddLibs', data: data});
+		res.render('yourFinishedStory', {data: data});
 	});
 };
 
@@ -89,7 +84,7 @@ exports.archive = function(req, res) {
 
 		} else {
 			data.stories = story;
-			res.render('archive', { title: 'Home | AddLibs', data: data});
+			res.render('archive', {data: data});
 		}
 	});
 	
@@ -101,7 +96,7 @@ exports.archiveStory = function(req, res){
 		var data = {};
 		data.parts = story.parts;
 		data.title = story.title;
-		res.render('yourFinishedStory', { title: 'Home | AddLibs', data: data});
+		res.render('yourFinishedStory', {data: data});
 	});
 }
 
@@ -109,7 +104,7 @@ exports.createStory = function(req, res){
 	console.log("Started");
 	var story = new req.app.db.models.Story();
 	story.title = req.query.title;
-	story.parts.push(req.query.part + " ");
+	story.parts.push(req.query.part);
 	story.last = req.query.part;
 	story.locked = false;
 	story.save(function(err, story){
@@ -117,12 +112,3 @@ exports.createStory = function(req, res){
 		res.json(story);
 	});
 };
-
-
-exports.list = function(req, res){
- 	res.send("respond with a resource");
- };
-
- exports.register = function(req, res){
- 	res.render('register');
- };
