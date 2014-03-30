@@ -13,6 +13,7 @@ $(document).ready(function() {
 	});
 
 	$("#newStory").click(function(event) {
+		console.log("send to new");
 		sendToNew();
 	});
 
@@ -33,40 +34,42 @@ $(document).ready(function() {
 		}
 	});
 
+
 	$("#sendButton").mouseenter(function() {
 		console.log("enter");
 		$(this).css("background-color","#1C6B04");
-	})
+	});
 
 	$("#sendButton").mouseout(function() {
 		console.log("exit");
 		$(this).css("background-color","#55ff22");
-	})
+	});
 
 	$("#archiveButton").mouseenter(function() {
 		console.log("enter");
 		$(this).css("background-color","#1C6B04");
-	})
+	});
 
 	$("#archiveButton").mouseout(function() {
 		console.log("exit");
 		$(this).css("background-color","#55ff22");
-	})
+	});
 
 	$("#newStory").mouseenter(function() {
 		console.log("enter");
 		$(this).css("background-color","#015774");
-	})
+	});
 
 	$("#newStory").mouseout(function() {
 		console.log("exit");
 		$(this).css("background-color","#0099cc");
-	})
+	});
 
 	// Hides the submit button and show character counter by default
 	hideSubmitButton();
 
 });
+
 
 // Appends inputBox text to story paragraph
 function sendToStory() {
@@ -75,6 +78,8 @@ function sendToStory() {
 		window.location.replace("/viewStory");
 	});
 }
+
+function buttonColorChange() {};
 
 // Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
@@ -85,17 +90,11 @@ function updateCharacterCounter() {
 }
 
 // Links to home page
-<<<<<<< HEAD
 function goToHome() {
 	$.get( "/", null, function(data) {
 		window.location.replace("/");
 	});
 } 
-
-// Links to create new story page
-function goToCreateNewStory() {
-
-}
 
 // Links to a completed story, provided a given id
 function goToViewStory(id) {
@@ -106,19 +105,9 @@ function goToViewStory(id) {
 // Links to the archive page
 function goToArchive() {
 	window.location.replace("/archive");
-=======
-function sendToHome() {
-	window.location.replace("/");
-} 
 
 function sendToNew() {
 	window.location.replace("/newStory");
-}
-
-// Links to the completed stories page
-function goToCompletedStories() {
-	window.location.replace("/viewCompletedStories");
->>>>>>> myWork
 }
 
 // Shows the submit button and hides the character counter
