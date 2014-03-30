@@ -1,0 +1,47 @@
+body {
+	background-color: #6699FF;
+}
+
+.center {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.story {
+	font-family:verdana;
+	padding-left:  20px;
+	padding-right: 20px;
+	padding-bottom:20px;
+	border-left:   10px solid #EE872A;
+	border-right:  10px solid #EE872A;
+	border-bottom: 10px solid #EE872A;
+	border-radius: 10px;
+	background-color:#CCFFFF;
+}
+
+#title {
+	font-family:verdana;
+	padding:20px;
+	border-radius:10px;
+	border:10px solid #EE872A;
+	background-color:#CCFFFF;
+}
+
+#showStory h2 {
+	text-align: center;
+}
+
+#showStory p {
+	text-align: left;
+}
+
+#inputBox {
+	float: left;
+	width: 65ex;
+	color: #f00;
+}
+
+#counter {
+	text-align: center;
+}
