@@ -8,6 +8,7 @@ exports = module.exports = function(app, passport) {
 	app.get('/updateStory', story.updateStory);
 	app.get('/viewStory', story.viewStory);
 	app.get('/viewCompletedStories', story.viewCompletedStories);
+	app.get('/newStory', story.newStory);
 	
 	app.get('/create', story.createStory);
 

@@ -12,6 +12,10 @@ $(document).ready(function() {
 		sendToHome();
 	});
 
+	$("#newStory").click(function(event) {
+		sendToNew();
+	});
+
 	// Links to archive when archive button is clicked
 	$("#archiveButton").click(function(event) {
 		goToCompletedStories();
@@ -62,10 +66,12 @@ function updateCharacterCounter() {
 
 // Links to home page
 function sendToHome() {
-	$.get( "/", null, function(data) {
-		window.location.replace("/");
-	});
+	window.location.replace("/");
 } 
+
+function sendToNew() {
+	window.location.replace("/newStory");
+}
 
 // Links to the completed stories page
 function goToCompletedStories() {
