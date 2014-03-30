@@ -40,7 +40,6 @@ $(document).ready(function() {
 		}
 	});
 
-
 	// Handles mouse-over button beautification
 	$("#sendButton").mouseenter(function() {
 		$(this).css("background-color","#44ee11");
@@ -91,6 +90,7 @@ function sendToStory() {
 	});
 }
 
+// Submits a new story to the database
 function submitNewStory() {
 	$.get( "/create" + "?title=" + $("#titleBox").val() + "&part=" + $("#inputBox").val(), null, function(data) {
 		goToHome();
