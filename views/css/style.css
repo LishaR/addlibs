@@ -93,7 +93,17 @@ h2 {
 	display: inline-block;
 }
 
+.archive a {
+	font-family: Lusitana;
+	font-size: 40px;
+	text-decoration: none;
+}
 
+.archive {
+	padding-left: 40px;
+	font-family: Lusitana;
+	font-size: 20px;
+}
 
 #newStory {
 	background: #0099cc;
