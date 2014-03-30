@@ -2,7 +2,7 @@
 	background: rgb(122, 204, 207);
 	position: fixed;
 	top: 200px;
-	right: 50px;
+	right: 140px;
 	width: 10%;
 	height: 30%;
 	display: inline-block;
@@ -14,6 +14,8 @@
 
 
 .button {
+	font-size: 12px;
+	font-weight: bold;
 	width: 100px;
 	height: 40px; 
 	color: white; 
