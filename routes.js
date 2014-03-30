@@ -9,7 +9,7 @@ exports = module.exports = function(app, passport) {
 	app.get('/viewStory', story.viewStory);
 	app.get('/archive', story.archive);
 	app.get('/newStory', story.newStory);
-	
+
 	app.get('/create', story.createStory);
 
 	// app.param('resource', resource.resource);
