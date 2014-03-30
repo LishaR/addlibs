@@ -73,3 +73,15 @@ h1 {
 	color: white;
 	font-style: italic;
 }
+
+.titleform {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.textform {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}

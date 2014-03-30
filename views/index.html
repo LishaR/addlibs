@@ -11,16 +11,16 @@
 		<h1> AddLibs </h1>
 		<div class="content">
 			<div class="title">
-				<h2 style=""> "<%= data.title %>" </h2>
+				<h2> "<%= data.title %>" </h2>
 			</div>
 			<div class="text">
 				<%= data.last %>
 			</div>
 			<div class="forms">
 				<center><input type="text" id="inputBox" class="form" placeholder="Add to the story." maxlength="40">
-        <span id="counter"> 0 / 40 </span>
-        <span class="input-group-btn"><button type="button" class="btn btn-primary" id="sendButton"> > </button></span> 
-				<br><button type="button" id="archiveButton" class="button">ARCHIVE</button>
+        <div id="counter" class="counter"> 0 / 40 </div>
+        <span class="input-group-btn"><button type="button" class="btn btn-primary submitButton" id="sendButton"> > </button></span> 
+				<br><button type="button" id="archiveButton" class="button" onmouseover="buttonColorChange()">ARCHIVE</button>
 				<button type="button" id="newStory" class="button">START NEW</button></center>
 			</div>
 		</div>

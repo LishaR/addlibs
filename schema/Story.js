@@ -3,7 +3,8 @@ exports = module.exports = function(app, mongoose) {
 	var storySchema = new mongoose.Schema({			
 			title: String,
 			parts: [String],
-			last: String,
+			lastWords: String,
+			lastChars: String,
 			locked: Boolean,
 			created: {type: Date, default: Date.now}
 		});

@@ -29,6 +29,16 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#sendButton").mouseenter(function() {
+		console.log("enter");
+		$(this).css("background-color","#1C6B04");
+	})
+
+	$("#sendButton").mouseout(function() {
+		console.log("exit");
+		$(this).css("background-color","##55ff22");
+	})
+
 	// Hides the submit button and show character counter by default
 	hideSubmitButton();
 
@@ -73,3 +83,4 @@ function hideSubmitButton() {
 	$("#sendButton").hide();
 	$("#counter").show();
 }
+
