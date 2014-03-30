@@ -84,7 +84,6 @@ h2 {
 	font-size: 22px;
 	color: rgb(145, 27, 27);
 	display: inline-block;
-	/* background: gray; */
 	font-family: Lusitana;
 	font-weight: bold;
 	width: 70px;
@@ -112,6 +111,10 @@ h2 {
 
 #homeButton {
 	background-color: rgb(109, 108, 108);
+}
+
+#submitNewStory {
+	background: #55ff22;
 }
 
 #newStory {

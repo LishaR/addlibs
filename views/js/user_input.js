@@ -35,8 +35,7 @@ $(document).ready(function() {
 	});
 
 
-	//button mouse-over
-
+	// Handles mouse-over button beautification
 	$("#sendButton").mouseenter(function() {
 		$(this).css("background-color","#1C6B04");
 	});
@@ -62,17 +61,24 @@ $(document).ready(function() {
 	});
 
 	$("#homeButton").mouseenter(function() {
+<<<<<<< HEAD
 		$(this).css("background-color","#111111");
 	})
 
 	$("#homeButton").mouseout(function() {
 		$(this).css("background-color","#222222");
+=======
+		$(this).css("background-color","rgb(41, 40, 40)");
+	})
+
+	$("#homeButton").mouseout(function() {
+		$(this).css("background-color","rgb(109, 108, 108)");
+>>>>>>> 91a6c45e5a405a70d61d3b2c60d43fc185e7d1fd
 	})
 
 	// Hides the submit button and show character counter by default
 	hideSubmitButton();
 });
-
 
 // Appends inputBox text to story paragraph
 function sendToStory() {
@@ -86,11 +92,8 @@ function buttonColorChange() {};
 
 // Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
-
 	var count = $("#inputBox").val().length;
 	$("#counter").text("" + count + " / 40");
-	// if (count == 40) showSubmitButton();
-	// else hideSubmitButton();
 }
 
 // Links to home page
@@ -120,14 +123,3 @@ function showSubmitButton() {
 	$("#sendButton").show();
 	$("#counter").hide();
 }
-
- // // Shows the submit button and hides the character counter
- // function showSubmitButton() {
- // 	$("#sendButton").show();
- // 	$("#counter").hide();
- // }
-
- // // Hides the submit button and shows the character counter
- // function hideSubmitButton() {
- // 	$("#sendButton").hide();
- // 	$("#counter").show();

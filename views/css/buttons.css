@@ -7,6 +7,7 @@
 	display: inline-block;
 }
 
+
 #archiveButton {
 	background: #ff3311;
 }
@@ -17,8 +18,16 @@
 
 #newStory {
 	background: #0099cc;
-}
 
+.no-click {
+	font-size: 12px;
+	font-weight: bold;
+	width: 100px;
+	height: 40px; 
+	color: white; 
+	shadow: none; 
+	border: none;
+}
 
 .button {
 	font-size: 12px;
@@ -28,6 +37,9 @@
 	color: white; 
 	shadow: none; 
 	border: none;
+
+	cursor: pointer; 
+	cursor: hand;
 } 
 
 .submitButton {
@@ -41,4 +53,8 @@
 	height: 50px;
 	border-radius: 15px;
 	background-color: #55ff22;
+}
+
+#archiveButton {
+	background: #55ff22;
 }

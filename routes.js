@@ -1,7 +1,7 @@
 exports = module.exports = function(app, passport) {
 
-	var index = require('./routes/index')
-	, story = require('./routes/story');
+	var index = require('./routes/index');
+	var story = require('./routes/story');
 
 	//front end
 	app.get('/', index.index);
@@ -9,7 +9,6 @@ exports = module.exports = function(app, passport) {
 	app.get('/viewStory', story.viewStory);
 	app.get('/archive', story.archive);
 	app.get('/newStory', story.newStory);
-	
 	app.get('/create', story.createStory);
 
 	// app.param('resource', resource.resource);
