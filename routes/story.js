@@ -33,16 +33,21 @@ exports.checkStory = function(req, res) {
 getStory = function(req, res) {
 	req.app.db.models.Story.findOne({locked: false}, function(err, story){
 		if(err) console.log(err);
-		story.locked = true;
-		req.session.storyID = story._id;
-		req.session.save();
-		var data = {};
-		data.title = story.title;
-		data.last = story.last;
-		story.save(function(err, story){
-			if(err) console.log(err);
-			res.render('index', { title: 'Home | AddLibs', data: data});
-		});
+
+		if (!story) {
+			res.render('new', {title: 'Home | AddLibs'});
+		} else {
+			story.locked = true;
+			req.session.storyID = story._id;
+			req.session.save();
+			var data = {};
+			data.title = story.title;
+			data.last = story.last;
+			story.save(function(err, story){
+				if(err) console.log(err);
+				res.render('index', { title: 'Home | AddLibs', data: data});
+			});
+		}
 	});
 };
 
