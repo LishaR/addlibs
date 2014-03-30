@@ -4,6 +4,7 @@ exports = module.exports = function(app, mongoose) {
 			title: String,
 			parts: [String],
 			last: String,
+			locked: Boolean,
 			created: {type: Date, default: Date.now}
 		});
 	 
