@@ -74,10 +74,11 @@ function sendToStory() {
 
 // Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
+	
 	var count = $("#inputBox").val().length;
 	$("#counter").text("" + count + " / 40");
-	if (count == 40) showSubmitButton();
-	else hideSubmitButton();
+	// if (count == 40) showSubmitButton();
+	// else hideSubmitButton();
 }
 
 // Links to home page
@@ -103,15 +104,15 @@ function goToArchive() {
 	window.location.replace("/archive");
 }
 
-// Shows the submit button and hides the character counter
-function showSubmitButton() {
-	$("#sendButton").show();
-	$("#counter").hide();
-}
+// // Shows the submit button and hides the character counter
+// function showSubmitButton() {
+// 	$("#sendButton").show();
+// 	$("#counter").hide();
+// }
 
-// Hides the submit button and shows the character counter
-function hideSubmitButton() {
-	$("#sendButton").hide();
-	$("#counter").show();
-}
+// // Hides the submit button and shows the character counter
+// function hideSubmitButton() {
+// 	$("#sendButton").hide();
+// 	$("#counter").show();
+// }
 
