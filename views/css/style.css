@@ -98,7 +98,9 @@ h2 {
 	display: inline-block;
 }
 
-
+#homeButton {
+	background: #000000;
+}
 
 #newStory {
 	background: #0099cc;

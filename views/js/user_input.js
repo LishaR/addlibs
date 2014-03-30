@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	// Links to home page when home button is clicked
 	$("#homeButton").click(function(event) {
-		sendToHome();
+		goToHome();
 	});
 
 	// Links to archive when archive button is clicked
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 		// Sends to story if ENTER button is clicked and character count is reached
 		var key = event.keyCode || event.which;
-		if (key == 13 && $("#inputBox").val().length == 40) {
+		if (key == 13) {
 			sendToStory();
 		}
 	});
@@ -57,6 +57,16 @@ $(document).ready(function() {
 	$("#newStory").mouseout(function() {
 		console.log("exit");
 		$(this).css("background-color","#0099cc");
+	})
+
+	$("#homeButton").mouseenter(function() {
+		console.log("enter");
+		$(this).css("background-color","#015774");
+	})
+
+	$("#homeButton").mouseout(function() {
+		console.log("exit");
+		$(this).css("background-color","#000000");
 	})
 
 	// Hides the submit button and show character counter by default
