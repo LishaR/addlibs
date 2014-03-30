@@ -114,6 +114,10 @@ h2 {
 	background-color: rgb(109, 108, 108);
 }
 
+#submitNewStory {
+	background: #55ff22;
+}
+
 #newStory {
 	background: #0099cc;
 }
