@@ -36,48 +36,39 @@ $(document).ready(function() {
 
 
 	$("#sendButton").mouseenter(function() {
-		console.log("enter");
 		$(this).css("background-color","#1C6B04");
 	});
 
 	$("#sendButton").mouseout(function() {
-		console.log("exit");
 		$(this).css("background-color","#55ff22");
 	});
 
 	$("#archiveButton").mouseenter(function() {
-		console.log("enter");
 		$(this).css("background-color","#1C6B04");
 	});
 
 	$("#archiveButton").mouseout(function() {
-		console.log("exit");
 		$(this).css("background-color","#55ff22");
 	});
 
 	$("#newStory").mouseenter(function() {
-		console.log("enter");
 		$(this).css("background-color","#015774");
 	});
 
 	$("#newStory").mouseout(function() {
-		console.log("exit");
 		$(this).css("background-color","#0099cc");
 	});
 
 	$("#homeButton").mouseenter(function() {
-		console.log("enter");
 		$(this).css("background-color","#015774");
 	})
 
 	$("#homeButton").mouseout(function() {
-		console.log("exit");
 		$(this).css("background-color","#000000");
 	})
 
 	// Hides the submit button and show character counter by default
 	hideSubmitButton();
-
 });
 
 
