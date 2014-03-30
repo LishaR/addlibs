@@ -107,13 +107,13 @@ function sendToStory() {
 
 // Submits a new story to the database
 function submitNewStory() {
-	if (!($("#titleBox").val() && $("#inputBox").val()))
+	if (!($("#titleBox").val() && $("#newstory-box").val()))
 	{
 		$("#error-msg").show();
 	}
 	else
 	{
-		$.get( "/create" + "?title=" + $("#titleBox").val() + "&part=" + $("#inputBox").val(), null, function(data) {
+		$.get( "/create" + "?title=" + $("#titleBox").val() + "&part=" + $("#newstory-box").val(), null, function(data) {
 			goToHome();
 		});
 	}
