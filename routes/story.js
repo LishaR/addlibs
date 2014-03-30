@@ -4,7 +4,6 @@
  var passport = require('passport')
  , oauthorize = require('oauthorize')
  , login = require('connect-ensure-login')
- , hashtag = require('./hashtag')
  , async = require('async')
  , sugar = require('sugar');
 
@@ -60,6 +59,14 @@ exports.updateStory = function(req, res) {
 			console.log("finished update");
 			res.json(story);
 		});
+	});
+};
+
+exports.newStory = function(req, res) {
+	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
+		if(err) console.log(err);
+		var data = {};
+		res.render('newstory', { title:  'Home | AddLibs', data: data});
 	});
 };
 
