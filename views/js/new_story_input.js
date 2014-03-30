@@ -12,14 +12,9 @@ $(document).ready(function() {
 		goToHome();
 	});
 
-	// Links to create new page when create new button is clicked
 	$("#newStory").click(function(event) {
-		goToNew();
-	});
-
-	// Submits a new story
-	$("#submitNewStory").click(function(event) {
-		submitNewStory();
+		console.log("send to new");
+		sendToNew();
 	});
 
 	// Links to archive when archive button is clicked
@@ -40,63 +35,76 @@ $(document).ready(function() {
 	});
 
 
-	// Handles mouse-over button beautification
 	$("#sendButton").mouseenter(function() {
+		console.log("enter");
 		$(this).css("background-color","#1C6B04");
 	});
 
 	$("#sendButton").mouseout(function() {
+		console.log("exit");
 		$(this).css("background-color","#55ff22");
 	});
 
 	$("#archiveButton").mouseenter(function() {
-		$(this).css("background-color","#dd1c00");
+		console.log("enter");
+		$(this).css("background-color","#1C6B04");
 	});
 
 	$("#archiveButton").mouseout(function() {
-		$(this).css("background-color","#ff3311");
+		console.log("exit");
+		$(this).css("background-color","#55ff22");
 	});
 
 	$("#newStory").mouseenter(function() {
-		$(this).css("background-color","#0077aa");
+		console.log("enter");
+		$(this).css("background-color","#015774");
 	});
 
 	$("#newStory").mouseout(function() {
+		console.log("exit");
 		$(this).css("background-color","#0099cc");
 	});
 
 	$("#homeButton").mouseenter(function() {
-		$(this).css("background-color","#111111");
+		console.log("enter");
+		$(this).css("background-color","#015774");
 	})
 
 	$("#homeButton").mouseout(function() {
-		$(this).css("background-color","#222222");
+		console.log("exit");
+		$(this).css("background-color","#000000");
 	})
+
+	// Hides the submit button and show character counter by default
+	hideSubmitButton();
+
 });
 
+
 // Appends inputBox text to story paragraph
-function sendToStory() {
-	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
+function createStory() {
+	$.get( "/createStory" + '?title=' + $("#titleBox").val() + '&part=' + $("#inputBox").val(), null, function(data) {	
 		console.log("call function");
 		window.location.href = "/viewStory";
 	});
 }
 
-function submitNewStory() {
-	$.get( "/create" + "?title=" + $("#titleBox").val() + "&part=" + $("#inputBox").val(), null, function(data) {
-		goToHome();
-	});
-}
+function buttonColorChange() {};
 
 // Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
+
 	var count = $("#inputBox").val().length;
 	$("#counter").text("" + count + " / 40");
+	// if (count == 40) showSubmitButton();
+	// else hideSubmitButton();
 }
 
 // Links to home page
 function goToHome() {
-	window.location.href = "/";
+	$.get( "/", null, function(data) {
+		window.location.href = "/";
+	});
 } 
 
 // Links to a completed story, provided a given id
@@ -110,8 +118,7 @@ function goToArchive() {
 	window.location.replace("/archive");
 }
 
-// Links to create a new story page
-function goToNew() {
+function sendToNew() {
 	window.location.replace("/newStory");
 }
 
@@ -121,8 +128,15 @@ function showSubmitButton() {
 	$("#counter").hide();
 }
 
-// Hides the submit button and shows the character counter
-function hideSubmitButton() {
-	$("#sendButton").hide();
-	$("#counter").show();
-}
+ // Shows the submit button and hides the character counter
+ function showSubmitButton() {
+ 	$("#sendButton").show();
+ 	$("#counter").hide();
+ }
+
+ // Hides the submit button and shows the character counter
+ function hideSubmitButton() {
+ 	$("#sendButton").hide();
+ 	$("#counter").show();
+ }
+

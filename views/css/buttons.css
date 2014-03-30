@@ -7,6 +7,19 @@
 	display: inline-block;
 }
 
+
+#archiveButton {
+	background: #ff3311;
+}
+
+#homeButton {
+	background: #222222;
+}
+
+#newStory {
+	background: #0099cc;
+}
+
 .no-click {
 	font-size: 12px;
 	font-weight: bold;
@@ -41,8 +54,4 @@
 	height: 50px;
 	border-radius: 15px;
 	background-color: #55ff22;
-}
-
-#archiveButton {
-	background: #55ff22;
 }
