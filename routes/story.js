@@ -55,8 +55,7 @@ exports.updateStory = function(req, res) {
 	console.log("updating");
 	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 		if(err) console.log(err);
-		req.query.part = req.query.part + " ";
-		story.parts.push(req.query.part);
+		story.parts.push(req.query.part + " ");
 		story.last = req.query.part;
 		story.locked = false;
 		story.save(function(err, story){
@@ -96,12 +95,21 @@ exports.archive = function(req, res) {
 	
 };
 
+exports.archiveStory = function(req, res){
+	var id = req.query.id;
+	var story = req.app.db.models.Story.findOne({_id: id}, function(err, story) {
+		var data = {};
+		data.parts = story.parts;
+		data.title = story.title;
+		res.render('yourFinishedStory', { title: 'Home | AddLibs', data: data});
+	});
+}
+
 exports.createStory = function(req, res){
 	console.log("Started");
 	var story = new req.app.db.models.Story();
 	story.title = req.query.title;
-	req.query.part = req.query.part + " ";
-	story.parts.push(req.query.part);
+	story.parts.push(req.query.part + " ");
 	story.last = req.query.part;
 	story.locked = false;
 	story.save(function(err, story){
