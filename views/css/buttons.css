@@ -11,6 +11,15 @@
 	background: #55ff22;
 }
 
+.no-click {
+	font-size: 12px;
+	font-weight: bold;
+	width: 100px;
+	height: 40px; 
+	color: white; 
+	shadow: none; 
+	border: none;
+}
 
 .button {
 	font-size: 12px;
@@ -20,7 +29,7 @@
 	color: white; 
 	shadow: none; 
 	border: none;
-	
+
 	cursor: pointer; 
 	cursor: hand;
 } 
