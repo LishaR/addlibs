@@ -13,12 +13,15 @@ $(document).ready(function () {
 			stories[i][0] + "</h2></div><div class='text'>" + 
 			stories[i][1] + "...</div>");
 
+		// Append our created div to the container div
+		$("#storiesContainer").append(newStoryDiv);
+
+		/* INCLUDE IF YOU WANT SPACES BETWEEN THE CONTENT
 		// Add an empty div for spacing
 		var emptyDiv = document.createElement("div");
 		emptyDiv.className = "empty";
-
-		// Append our created divs to the container div
-		$("#storiesContainer").append(newStoryDiv);
+		// Append the empty space div
 		$("#storiesContainer").append(emptyDiv);
+		*/
 	}
 });
