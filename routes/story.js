@@ -37,7 +37,7 @@ getStory = function(req, res) {
 		if(err) console.log(err);
 
 		if (stories.length == 0) {
-			newStory(req, res);
+			res.render('newstory');
 		} else {
 			var index = Math.floor(Math.random() * stories.length);
 			var story = stories[index];
