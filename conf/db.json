@@ -1,9 +1,0 @@
-{
-	"_comment": "Location of MongoDB instance",
-	"host": "ds053798.mongolab.com",
-	"username": "twit",
-	"password": "twit",
-	"port": "53798",
-	"db": "hackprinceton",
-	"sessionSecret": "076ee61d63aa10a125ea872411e433b9"
-}

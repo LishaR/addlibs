@@ -6,16 +6,13 @@
 var express = require('express')
   , routes = require('./routes')
   , mongoose = require('mongoose')
-  , passport = require('passport')
   , http = require('http')
   , MongoStore = require('connect-mongo')(express)
   , path = require('path');
 
 var flash = require('connect-flash');
 
-// get config
-var konphyg = require('konphyg')(__dirname + '/conf/');
-var config = konphyg.all();
+
 
 var app = express();
 
@@ -53,42 +50,16 @@ app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 app.use(express.cookieParser());
 app.use(express.bodyParser());
 app.use(express.session({
-	secret: config.db.sessionSecret,
-	maxAge: new Date(Date.now() + 3600000),
-	store: new MongoStore(config.db)
+	secret: "sssshhhhhh, this is a secret",
+	maxAge: new Date(Date.now() + 3600000)
 }));
 app.use(express.methodOverride());
-// app.use(passport.initialize());
-// app.use(passport.session());
-app.use(express.methodOverride());
-app.use(function(req, res, next){
-  if(req.user){
-    res.locals.user = req.user;
-    if(req.user.provider == "google" && req.user.google.picture) {
-      res.locals.user.image = req.user.google.picture;
-    } else if(req.user.provider == "facebook") {
-      res.locals.user.image = 'http://graph.facebook.com/' + req.user.facebook.username + '/picture';
-    }     
-    if(res.locals.user.image === undefined || res.locals.user.image == '') res.locals.user.image = '/images/avatar_default.jpg';
-  }   
-  next()
-})
 app.use(flash());
 app.use(app.router);
 app.use(require('stylus').middleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.locals.commafy = function (x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
-// development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-}
-
-// Import utilities and configure uri routing
-require('./utilities')(app);
 // require('./lib/passport')(app, passport);
 require('./routes')(app);
 
