@@ -64,11 +64,11 @@ $(document).ready(function() {
 	});
 
 	$("#homeButton").mouseenter(function() {
-		$(this).css("background-color","rgb(41, 40, 40)");
+		$(this).css("background-color","#111111");
 	})
 
 	$("#homeButton").mouseout(function() {
-		$(this).css("background-color","rgb(109, 108, 108)");
+		$(this).css("background-color","#222222");
 	})
 });
 
