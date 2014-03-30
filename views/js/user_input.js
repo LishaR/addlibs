@@ -60,7 +60,7 @@ $(document).ready(function() {
 	});
 
 	$("#newStory").mouseout(function() {
-		$(this).css("background-color","#099cc");
+		$(this).css("background-color","#0099cc");
 	});
 
 	$("#homeButton").mouseenter(function() {

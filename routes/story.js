@@ -35,7 +35,7 @@ getStory = function(req, res) {
 		if(err) console.log(err);
 
 		if (!story) {
-			res.render('new', {title: 'Home | AddLibs'});
+			newStory(req, res);
 		} else {
 			story.locked = true;
 			req.session.storyID = story._id;
@@ -68,11 +68,8 @@ exports.updateStory = function(req, res) {
 };
 
 exports.newStory = function(req, res) {
-	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
-		if(err) console.log(err);
 		var data = {};
 		res.render('newstory', { title:  'Home | AddLibs', data: data});
-	});
 };
 
 exports.viewStory = function(req, res) {
