@@ -98,16 +98,20 @@ h2 {
 	display: inline-block;
 }
 
+.archive {
+	padding-left: 40px;
+	font-family: Lusitana;
+	font-size: 20px;
+}
+
 .archive a {
 	font-family: Lusitana;
 	font-size: 40px;
 	text-decoration: none;
 }
 
-.archive {
-	padding-left: 40px;
-	font-family: Lusitana;
-	font-size: 20px;
+#homeButton {
+	background: #000000;
 }
 
 #newStory {
