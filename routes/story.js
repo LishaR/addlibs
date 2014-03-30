@@ -73,11 +73,11 @@ exports.viewStory = function(req, res) {
 	});
 };
 
-exports.viewCompletedStories = function(req, res) {
+exports.archive = function(req, res) {
 	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 		if(err) console.log(err);
 		var data = {};
-		res.render('finished_stories', { title: 'Home | AddLibs', data: data});
+		res.render('archive', { title: 'Home | AddLibs', data: data});
 	});
 };
 

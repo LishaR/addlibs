@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	// Links to archive when archive button is clicked
 	$("#archiveButton").click(function(event) {
-		goToCompletedStories();
+		goToArchive();
 	});
 
 	// Each time a key is pressed...
@@ -81,15 +81,26 @@ function updateCharacterCounter() {
 }
 
 // Links to home page
-function sendToHome() {
+function goToHome() {
 	$.get( "/", null, function(data) {
 		window.location.replace("/");
 	});
 } 
 
-// Links to the completed stories page
-function goToCompletedStories() {
-	window.location.replace("/viewCompletedStories");
+// Links to create new story page
+function goToCreateNewStory() {
+
+}
+
+// Links to a completed story, provided a given id
+function goToViewStory(id) {
+	/* TODO: Figure out which story to bring up!!! */
+	window.location.replace("/viewStory");
+}
+
+// Links to the archive page
+function goToArchive() {
+	window.location.replace("/archive");
 }
 
 // Shows the submit button and hides the character counter
