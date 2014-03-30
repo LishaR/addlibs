@@ -68,13 +68,13 @@ $(document).ready(function() {
 function sendToStory() {
 	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
 		console.log("call function");
-		window.location.replace("/viewStory");
+		window.location.href = "/viewStory";
 	});
 }
 
 // Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
-	
+
 	var count = $("#inputBox").val().length;
 	$("#counter").text("" + count + " / 40");
 	// if (count == 40) showSubmitButton();
@@ -84,7 +84,7 @@ function updateCharacterCounter() {
 // Links to home page
 function goToHome() {
 	$.get( "/", null, function(data) {
-		window.location.replace("/");
+		window.location.href = "/";
 	});
 } 
 
@@ -96,12 +96,12 @@ function goToCreateNewStory() {
 // Links to a completed story, provided a given id
 function goToViewStory(id) {
 	/* TODO: Figure out which story to bring up!!! */
-	window.location.replace("/viewStory");
+	window.location.href = "/viewStory";
 }
 
 // Links to the archive page
 function goToArchive() {
-	window.location.replace("/archive");
+	window.location.href = "/archive";
 }
 
 // // Shows the submit button and hides the character counter
