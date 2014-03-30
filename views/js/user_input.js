@@ -119,15 +119,13 @@ function showSubmitButton() {
 	$("#counter").hide();
 }
 
- // Shows the submit button and hides the character counter
- function showSubmitButton() {
- 	$("#sendButton").show();
- 	$("#counter").hide();
- }
+ // // Shows the submit button and hides the character counter
+ // function showSubmitButton() {
+ // 	$("#sendButton").show();
+ // 	$("#counter").hide();
+ // }
 
- // Hides the submit button and shows the character counter
- function hideSubmitButton() {
- 	$("#sendButton").hide();
- 	$("#counter").show();
- }
-
+ // // Hides the submit button and shows the character counter
+ // function hideSubmitButton() {
+ // 	$("#sendButton").hide();
+ // 	$("#counter").show();
