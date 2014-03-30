@@ -8,7 +8,15 @@
 }
 
 #archiveButton {
-	background: #55ff22;
+	background: #ff3311;
+}
+
+#homeButton {
+	background: #222222;
+}
+
+#newStory {
+	background: #0099cc;
 }
 
 
