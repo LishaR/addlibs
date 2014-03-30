@@ -114,6 +114,10 @@ h2 {
 	background: #000000;
 }
 
+#submitNewStory {
+	background: #55ff22;
+}
+
 #newStory {
 	background: #0099cc;
 }
