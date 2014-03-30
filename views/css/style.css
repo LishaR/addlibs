@@ -1,47 +1,79 @@
 body {
-	background-color: #6699FF;
+	background: rgb(122, 204, 207);
 }
 
-.center {
-	width: 400px;
+h1 {
+	font-family: 'Share Tech Mono';
+	font-size: 80px;
+	text-align:center; 
+	color: white; 
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-family: Lusitana; 
+	font-size: 40px;
+	margin-bottom:10px; 
+	margin-top:5px;
+}
+
+.name {
+	width: 65%;
+	background: white;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 15px;
+}
+.content {
+	background: rgb(207, 180, 122);
+	background: rgb(255, 255, 255);
+	width: 60%;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+	padding-bottom: 60px;
 }
 
-.story {
-	font-family:verdana;
-	padding-left:  20px;
-	padding-right: 20px;
-	padding-bottom:20px;
-	border-left:   10px solid #EE872A;
-	border-right:  10px solid #EE872A;
-	border-bottom: 10px solid #EE872A;
-	border-radius: 10px;
-	background-color:#CCFFFF;
+.text {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: Lusitana;
+	font-size: 60px;
 }
 
-#title {
-	font-family:verdana;
-	padding:20px;
-	border-radius:10px;
-	border:10px solid #EE872A;
-	background-color:#CCFFFF;
-}
-
-#showStory h2 {
+.title {
+	width: 90%;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }
 
-#showStory p {
-	text-align: left;
+.form {
+	width: 70%;
+	font-family: Lusitana;
+	font-size: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }
 
-#inputBox {
-	float: left;
-	width: 65ex;
-	color: #f00;
+.button {
+	width: 100px;
+	height: 40px; 
+	color: white; 
+	shadow: none; 
+	border: none;
+} 
+
+#archive {
+	background: #55ff22;
 }
 
-#counter {
-	text-align: center;
+#newStory {
+	background: #0099cc;
 }
