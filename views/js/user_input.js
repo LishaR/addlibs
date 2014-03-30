@@ -34,7 +34,7 @@ $(document).ready(function() {
 		}
 	});
 
-
+	// Handles mouse-over button beautification
 	$("#sendButton").mouseenter(function() {
 		$(this).css("background-color","#1C6B04");
 	});
@@ -72,7 +72,6 @@ $(document).ready(function() {
 	hideSubmitButton();
 });
 
-
 // Appends inputBox text to story paragraph
 function sendToStory() {
 	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
@@ -85,11 +84,8 @@ function buttonColorChange() {};
 
 // Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
-
 	var count = $("#inputBox").val().length;
 	$("#counter").text("" + count + " / 40");
-	// if (count == 40) showSubmitButton();
-	// else hideSubmitButton();
 }
 
 // Links to home page
@@ -119,14 +115,3 @@ function showSubmitButton() {
 	$("#sendButton").show();
 	$("#counter").hide();
 }
-
- // // Shows the submit button and hides the character counter
- // function showSubmitButton() {
- // 	$("#sendButton").show();
- // 	$("#counter").hide();
- // }
-
- // // Hides the submit button and shows the character counter
- // function hideSubmitButton() {
- // 	$("#sendButton").hide();
- // 	$("#counter").show();
