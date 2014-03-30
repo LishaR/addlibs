@@ -96,6 +96,10 @@ exports.archive = function(req, res) {
 	
 };
 
+exports.archiveStory = function(req, res){
+	
+}
+
 exports.createStory = function(req, res){
 	console.log("Started");
 	var story = new req.app.db.models.Story();

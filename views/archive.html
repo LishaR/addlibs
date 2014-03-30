@@ -12,7 +12,7 @@
   <h1> Archive </h1>
 	<div class="content">
     <% for (var i = 0; i < data.stories.length; i++) { %>
-      <div class='title'> <%= data.stories[i].title %><h2>
+      <div class='title' href="archiveStory?id=<%= data.stories[i]._id %>"> <%= data.stories[i].title %><h2>
       </h2></div>
       <div class='text'>
         <%= data.stories[i].parts[0] %> <%= data.stories[i].parts[1] %>
