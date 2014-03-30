@@ -17,11 +17,15 @@ var server = oauthorize.createServer();
 exports.checkStory = function(req, res) {
 	if (req.session.storyID) {
 		req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
-			story.locked = false;
-			story.save(function(err, story){
-				if(err) console.log(err);
+			if (!story) {
 				getStory(req, res);
-			});
+			} else {
+				story.locked = false;
+				story.save(function(err, story){
+					if(err) console.log(err);
+					getStory(req, res);
+				});
+			}	
 		});
 	} else {
 		getStory(req, res);
@@ -32,7 +36,7 @@ getStory = function(req, res) {
 	req.app.db.models.Story.find({locked: false}, function(err, stories){
 		if(err) console.log(err);
 
-		if (!stories) {
+		if (stories.length == 0) {
 			newStory(req, res);
 		} else {
 			var index = Math.floor(Math.random() * stories.length);
