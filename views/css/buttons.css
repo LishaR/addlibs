@@ -14,6 +14,8 @@
 
 
 .button {
+	font-size: 12px;
+	font-weight: bold;
 	width: 100px;
 	height: 40px; 
 	color: white; 
