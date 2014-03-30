@@ -17,7 +17,6 @@ var server = oauthorize.createServer();
 
 exports.checkStory = function(req, res) {
 	console.log("checking");
-	req.session.storyID = false;
 	if (req.session.storyID) {
 		console.log("unlocking");
 		req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
@@ -40,8 +39,7 @@ getStory = function(req, res) {
 		req.session.save();
 		var data = {};
 		data.title = story.title;
-		data.lastWords = story.lastWords;
-		data.lastChars = story.lastChars
+		data.last = story.last;
 		story.save(function(err, story){
 			if(err) console.log(err);
 			res.render('index', { title: 'Home | AddLibs', data: data});
@@ -54,9 +52,7 @@ exports.updateStory = function(req, res) {
 	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 		if(err) console.log(err);
 		story.parts.push(req.query.part);
-		var lastSpace = req.query.part.lastIndexOf(' ');
-		story.lastWords = req.query.part.substring(0, lastSpace);
-		story.lastChars = req.query.part.substring(lastSpace + 1);
+		story.last = req.query.part;
 		story.locked = false;
 		story.save(function(err, story){
 			if(err) console.log(err);
@@ -89,9 +85,7 @@ exports.createStory = function(req, res){
 	var story = new req.app.db.models.Story();
 	story.title = req.query.title;
 	story.parts.push(req.query.part);
-	var lastSpace = req.query.part.lastIndexOf(' ');
-	story.lastWords = req.query.part.substring(0, lastSpace);
-	story.lastChars = req.query.part.substring(lastSpace + 1);
+	story.lastWords = req.query.part;
 	story.locked = false;
 	story.save(function(err, story){
 		if(err) console.log(err);
