@@ -29,12 +29,14 @@ exports.checkStory = function(req, res) {
 };
 
 getStory = function(req, res) {
-	req.app.db.models.Story.findOne({locked: false}, function(err, story){
+	req.app.db.models.Story.find({locked: false}, function(err, stories){
 		if(err) console.log(err);
 
-		if (!story) {
+		if (!stories) {
 			newStory(req, res);
 		} else {
+			var index = Math.floor(Math.random() * stories.length);
+			var story = stories[index];
 			story.locked = true;
 			req.session.storyID = story._id;
 			req.session.save();
