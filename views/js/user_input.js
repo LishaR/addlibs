@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	$("#newStory").click(function(event) {
 		console.log("send to new");
-		sendToNew();
+		goToNew();
 	});
 
 	// Links to archive when archive button is clicked
@@ -105,7 +105,8 @@ function goToArchive() {
 	window.location.replace("/archive");
 }
 
-function sendToNew() {
+// Links to create a new story page
+function goToNew() {
 	window.location.replace("/newStory");
 }
 
@@ -113,4 +114,10 @@ function sendToNew() {
 function showSubmitButton() {
 	$("#sendButton").show();
 	$("#counter").hide();
+}
+
+// Hides the submit button and shows the character counter
+function hideSubmitButton() {
+	$("#sendButton").hide();
+	$("#counter").show();
 }
