@@ -17,9 +17,9 @@ var server = oauthorize.createServer();
 
 exports.checkStory = function(req, res) {
 	if (req.session.storyID) {
-		req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, oldStory){
-			oldStory.locked = false;
-			oldStory.save(function(err, story){
+		req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
+			story.locked = false;
+			story.save(function(err, story){
 				if(err) console.log(err);
 				getStory(req, res);
 			});
@@ -29,7 +29,7 @@ exports.checkStory = function(req, res) {
 	}
 };
 
-exports.getStory = function(req, res) {
+getStory = function(req, res) {
 	req.app.db.models.Story.findOne({locked: false}, function(err, story){
 		if(err) console.log(err);
 		story.locked = true;

@@ -10,7 +10,6 @@ exports = module.exports = function(app, passport) {
 	app.get('/viewCompletedStories', story.viewCompletedStories);
 	
 	app.get('/create', story.createStory);
-	app.get('/testLast', story.testLast);
 
 	// app.param('resource', resource.resource);
 	
