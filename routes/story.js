@@ -38,13 +38,13 @@ getStory = function(req, res) {
 			var index = Math.floor(Math.random() * stories.length);
 			var story = stories[index];
 			story.locked = true;
-			req.session.storyID = story._id;
-			req.session.save();
-			var data = {};
-			data.title = story.title;
-			data.last = story.last;
 			story.save(function(err, story){
 				if(err) console.log(err);
+				req.session.storyID = story._id;
+				req.session.save();
+				var data = {};
+				data.title = story.title;
+				data.last = story.last;
 				res.render('index', {data: data});
 			});
 		}
@@ -100,7 +100,7 @@ exports.archiveStory = function(req, res){
 		data.title = story.title;
 		res.render('yourFinishedStory', {data: data});
 	});
-}
+};
 
 exports.createStory = function(req, res){
 	console.log("Started");
