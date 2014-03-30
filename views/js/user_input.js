@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	// Links to archive when archive button is clicked
 	$("#archiveButton").click(function(event) {
-		goToCompletedStories();
+		goToArchive();
 	});
 
 	// Each time a key is pressed...
