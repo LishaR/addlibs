@@ -72,7 +72,7 @@ exports.viewStory = function(req, res) {
 	});
 };
 
-exports.viewCompletedStories = function(req, res) {
+exports.archive = function(req, res) {
 	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
 		if(err) console.log(err);
 		var data = {};
