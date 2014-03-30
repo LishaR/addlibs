@@ -53,6 +53,16 @@ h2 {
 	text-align: center;
 }
 
+.story {
+	width: 90%;
+	margin-right: auto;
+	margin-left:  auto;
+	margin-bottom:30px;
+	text-align: center;
+	font-family: Lusitana;
+	font-size: 30px;
+}
+
 .form {
 	width: 70%;
 	font-family: Lusitana;
