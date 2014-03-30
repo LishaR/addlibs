@@ -44,6 +44,7 @@ h2 {
 	text-align: center;
 	font-family: Lusitana;
 	font-size: 60px;
+	word-wrap:break-word;
 }
 
 .title {
@@ -52,6 +53,7 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	word-wrap:break-word;
 }
 
 .story {
@@ -63,6 +65,7 @@ h2 {
 	text-indent:  30px;
 	font-family: Lusitana;
 	font-size: 30px;
+	word-wrap:break-word;
 }
 
 .form {
@@ -110,7 +113,7 @@ h2 {
 }
 
 #homeButton {
-	background-color: rgb(109, 108, 108);
+	background: #222222;
 }
 
 #submitNewStory {

@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <meta charset="utf-8"/>
-	  <meta name="author" content="David Gilhooley"/>
-	  <title>addlibs</title>
-	  <link rel="stylesheet" type="text/css" href="style.css">
-	  <link rel="stylesheet" type="text/css" href="buttons.css">
-	  <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono|Lusitana' rel='stylesheet' type='text/css'>
-	</head>
-	<body style="background: rgb(122, 204, 207)">
-		<h1> AddLibs </h1>
-		<div class="content">
-			<div class="title">
-				<center><input type="text" id="titleBox" class="form titleform" placeholder="The Story Title" maxlength="40">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="author" content="David Gilhooley, Blake Lawson"/>
+	<title>addlibs</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="buttons.css">
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono|Lusitana' rel='stylesheet' type='text/css'>
+</head>
+<body style="background: rgb(122, 204, 207)">
+	<h1> New </h1>
+	<div class="content">
+		<div class="title">
+			<center><input type="text" id="titleBox" class="form titleform" placeholder="The Story Title" maxlength="40">
 			</div>
 			<div>
 				<center><input type="text" id="inputBox" class="form textform" placeholder="Get the story started" maxlength="40">
-			</div>
-			<div class="forms" style="text-align: center;">
-				<br><button type="button" class="button" id="submitNewStory">SUBMIT</button>
+				</div>
+				<div class="forms" style="text-align: center;">
+					<br><button type="button" class="button" id="submitNewStory">SUBMIT</button>
 				</center>
 			</div>
 			<div class="tracker" id="tracked">
 				<button type="button" id="homeButton" class="button" style="margin-bottom: 7px;">HOME</button><br/>
-			    <button type="button" id="archiveButton" class="button">ARCHIVE</button><br/>
-			<div>
+				<button type="button" id="archiveButton" class="button" style="margin-bottom: 7px;">ARCHIVE</button><br/>
+				<button type="button" id="newStory" class="button" style="margin-bottom: 7px;">START NEW</button>
+			</div>
+
 		</div>
-		<div class="footer">
-			Made in 36 hours. <br>
-			With love, Princeton Students.
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="user_input.js"></script> 
-		<script src="tracker.js"></script>
-	</body>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="user_input.js"></script> 
+</body>
 </html>
