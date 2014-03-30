@@ -7,28 +7,32 @@ $(document).ready(function() {
 		sendToStory();
 	});
 
+	// Links to home page when home button is clicked
+	$("#homeButton").click(function(event) {
+		sendToHome();
+	});
+
+	// Links to archive when archive button is clicked
+	$("#archiveButton").click(function(event) {
+		goToCompletedStories();
+	});
+
 	// Each time a key is pressed...
 	$("#inputBox").keyup(function(event) {
 		// Updates the character count
 		updateCharacterCounter();
 
-		// Sends to story when ENTER button is clicked
+		// Sends to story if ENTER button is clicked and character count is reached
 		var key = event.keyCode || event.which;
-		if (key == 13) {
+		if (key == 13 && $("#inputBox").val().length == 40) {
 			sendToStory();
 		}
 	});
 
-	$("#homeButton").click(function(event) {
-		sendToHome();
-	});	
-});
+	// Hides the submit button and show character counter by default
+	hideSubmitButton();
 
-function sendToHome() {
-	$.get( "/", null, function(data) {
-		window.location.replace("/");
-	});
-} 
+});
 
 // Appends inputBox text to story paragraph
 function sendToStory() {
@@ -38,13 +42,34 @@ function sendToStory() {
 	});
 }
 
-// Updates the character counter
+// Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
 	var count = $("#inputBox").val().length;
 	$("#counter").text("" + count + " / 40");
+	if (count == 40) showSubmitButton();
+	else hideSubmitButton();
 }
+
+// Links to home page
+function sendToHome() {
+	$.get( "/", null, function(data) {
+		window.location.replace("/");
+	});
+} 
 
 // Links to the completed stories page
 function goToCompletedStories() {
 	window.location.replace("/viewCompletedStories");
+}
+
+// Shows the submit button and hides the character counter
+function showSubmitButton() {
+	$("#sendButton").show();
+	$("#counter").hide();
+}
+
+// Hides the submit button and shows the character counter
+function hideSubmitButton() {
+	$("#sendButton").hide();
+	$("#counter").show();
 }
