@@ -64,3 +64,12 @@ h1 {
 .button {
 	width: 100px; height: 40px; color: white; shadow: none; border: none;
 } 
+
+.footer {
+	position: absolute;
+	bottom: 5px;
+	text-align: right;
+	width: 99%;
+	color: white;
+	font-style: italic;
+}
