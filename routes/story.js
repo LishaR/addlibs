@@ -95,6 +95,16 @@ exports.archive = function(req, res) {
 	
 };
 
+exports.archiveStory = function(req, res){
+	var id = req.query.id;
+	var story = req.app.db.models.Story.findOne({_id: id}, function(err, story) {
+		var data = {};
+		data.parts = story.parts;
+		data.title = story.title;
+		res.render('yourFinishedStory', { title: 'Home | AddLibs', data: data});
+	});
+}
+
 exports.createStory = function(req, res){
 	console.log("Started");
 	var story = new req.app.db.models.Story();

@@ -13,7 +13,7 @@
 	<div class="content">
     <div class="archive">
     <% for (var i = 0; i < data.stories.length; i++) { %>
-      <a href="#"> <%= data.stories[i].title %></a> <%= data.stories[i].parts[0] %>...<p>
+      <a href="archiveStory?id=<%= data.stories[i]._id %>"> <%= data.stories[i].title %></a> <%= data.stories[i].parts[0] %>...<p>
       <% }; %>
     </div>
   </div>
