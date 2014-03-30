@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<meta name="author" content="David Gilhooley, Blake Lawson"/>
-	<title>addlibs</title>
+	<title>New | AddLibs</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="buttons.css">
 	<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono|Lusitana' rel='stylesheet' type='text/css'>
@@ -14,23 +14,24 @@
 
 	<h1> New </h1>
 	<div class="content">
-		<div class="title">
-			<center><input type="text" id="titleBox" class="form" placeholder="Title your story." maxlength="40">
-			<div>
-				<center><input type="text" id="newstory-box" class="form" placeholder="Get the story started!" maxlength="40">
-				</div>
+		<div style="margin-left:5%">
+			<input type="text" id="titleBox" class="form" placeholder="Title your story." maxlength="40">
+			<div class="forms">
+				<input type="text" id="inputBox" class="form" placeholder="Get the story started!" maxlength="40">
+				<div id="counter" class="counter"> 0 / 40 </div>
 				<p id="error-msg" class="error-msg"> Both fields need to be filled out, ya dumb! </p>
-				<div class="forms" style="text-align: center;">
-					<br><button type="button" class="button" id="submitNewStory">SUBMIT</button>
-				</center>
-			</div>
-			<div class="tracker" id="tracked">
-				<button type="button" id="homeButton" class="button" style="margin-bottom: 7px;">HOME</button><br/>
-				<button type="button" id="archiveButton" class="button" style="margin-bottom: 7px;">ARCHIVE</button><br/>
-				<button type="button" id="newStory" class="button" style="margin-bottom: 7px;">START NEW</button>
 			</div>
 		</div>
+		<div class="forms" style="text-align: center;"><br>
+			<button type="button" class="button" id="submitNewStory">SUBMIT</button>
+		</div>
+		<div class="tracker" id="tracked">
+			<button type="button" id="homeButton" class="button" style="margin-bottom: 7px;">HOME</button><br/>
+			<button type="button" id="archiveButton" class="button" style="margin-bottom: 7px;">ARCHIVE</button><br/>
+			<button type="button" id="newStory" class="button" style="margin-bottom: 7px;">START NEW</button>
+		</div>
 	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="user_input.js"></script> 
 </body>
