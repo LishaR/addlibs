@@ -2,6 +2,7 @@ $(document).ready(function() {
 	// Automatically puts cursor in inputBox
 	$("#inputBox").focus();
 	$("#titleBox").focus();
+	$("#error-msg").hide();
 
 	// Attaches send method to sendButton
 	$("#sendButton").click(function(event) {
@@ -37,6 +38,13 @@ $(document).ready(function() {
 		var key = event.keyCode || event.which;
 		if (key == 13) {
 			sendToStory();
+		}
+	});
+
+	$("#newstory-box").keyup(function(event) {
+		var key = event.keyCode || event.which;
+		if (key == 13) {
+			submitNewStory();
 		}
 	});
 
@@ -77,16 +85,30 @@ $(document).ready(function() {
 
 // Appends inputBox text to story paragraph
 function sendToStory() {
-	$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
-		console.log("call function");
-		window.location.href = "/viewStory";
-	});
+	if (!$("#inputBox").val())
+	{
+		$("#error-msg").show();
+	}
+	else
+	{
+		$.get( "/updateStory" + '?part=' + $("#inputBox").val(), null, function(data) {	
+			console.log("call function");
+			window.location.href = "/viewStory";
+		});
+	}
 }
 
 function submitNewStory() {
-	$.get( "/create" + "?title=" + $("#titleBox").val() + "&part=" + $("#inputBox").val(), null, function(data) {
-		goToHome();
-	});
+	if (!($("#titleBox").val() && $("#inputBox").val()))
+	{
+		$("#error-msg").show();
+	}
+	else
+	{
+		$.get( "/create" + "?title=" + $("#titleBox").val() + "&part=" + $("#inputBox").val(), null, function(data) {
+			goToHome();
+		});
+	}
 }
 
 // Updates the character counter, or displays / hides sendButton

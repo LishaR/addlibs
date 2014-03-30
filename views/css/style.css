@@ -17,6 +17,13 @@ h2 {
 	margin-top:5px;
 }
 
+.error-msg {
+	font-style: italic;
+	color: rgb(231, 50, 50);
+	font-size: 20px;
+	text-align:center
+}
+
 .name {
 	width: 65%;
 	background: white;
