@@ -11,12 +11,15 @@ h1 {
 	font-size: 80px;
 	text-align: center; 
 	color: white;
+	margin-top: 50px;
 	margin-bottom: 0px;
 }
 
 h2 {
 	font-family: Lusitana; 
 	font-size: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	margin-bottom:10px; 
 	margin-top:5px;
 }
@@ -40,8 +43,8 @@ h2 {
 .content {
 	background: white;
 	width: 60%;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 45px;
+	padding-bottom: 40px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -52,7 +55,8 @@ h2 {
 	font-family: Lusitana;
 	font-size: 60px;
 	word-wrap: break-word;
-	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-bottom: 40px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -68,9 +72,10 @@ h2 {
 
 .story {
 	width: 90%;
+	margin-top: 30px;
+	margin-bottom: 10px;
 	margin-right: auto;
 	margin-left:  auto;
-	margin-bottom:30px;
 	text-align:   left;
 	text-indent:  30px;
 	font-family: Lusitana;
@@ -82,15 +87,17 @@ h2 {
 	width: 75%;
 	font-family: Lusitana;
 	font-size: 35px;
+	margin-top: 0px;
+	margin-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 20px;
 }
 
 .forms {
 	display: inline-block;
 	width: 100%;
 	text-align: center;
+	margin-top: 0px;
 }
 
 .counter {
