@@ -7,11 +7,6 @@
 	display: inline-block;
 }
 
-#archiveButton {
-	background: #55ff22;
-}
-
-
 .button {
 	font-size: 12px;
 	font-weight: bold;
@@ -33,4 +28,8 @@
 	height: 50px;
 	border-radius: 15px;
 	background-color: #55ff22;
+}
+
+#archiveButton {
+	background: #55ff22;
 }

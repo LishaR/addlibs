@@ -64,7 +64,8 @@ $(document).ready(function() {
 	})
 
 	$("#homeButton").mouseout(function() {
-		$(this).css("background-color","#000000");
+		$(this).css("background-color","#6D6C6C");
+		109, 108, 108
 	})
 
 	// Hides the submit button and show character counter by default
