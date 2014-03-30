@@ -55,8 +55,8 @@ exports.updateStory = function(req, res) {
 		if(err) console.log(err);
 		story.parts.push(req.query.part);
 		var lastSpace = req.query.part.lastIndexOf(' ');
-		story.lastWords = req.query.part(0, lastSpace);
-		story.lastChars = req.query.part(lastSpace + 1);
+		story.lastWords = req.query.part.substring(0, lastSpace);
+		story.lastChars = req.query.part.substring(lastSpace + 1);
 		story.locked = false;
 		story.save(function(err, story){
 			if(err) console.log(err);
@@ -90,8 +90,8 @@ exports.createStory = function(req, res){
 	story.title = req.query.title;
 	story.parts.push(req.query.part);
 	var lastSpace = req.query.part.lastIndexOf(' ');
-	story.lastWords = req.query.part(0, lastSpace);
-	story.lastChars = req.query.part(lastSpace + 1);
+	story.lastWords = req.query.part.substring(0, lastSpace);
+	story.lastChars = req.query.part.substring(lastSpace + 1);
 	story.locked = false;
 	story.save(function(err, story){
 		if(err) console.log(err);
