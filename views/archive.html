@@ -11,13 +11,11 @@
 <body>
   <h1> Archive </h1>
 	<div class="content">
+    <div class="archive">
     <% for (var i = 0; i < data.stories.length; i++) { %>
-      <div class='title' href="archiveStory?id=<%= data.stories[i]._id %>"> <%= data.stories[i].title %><h2>
-      </h2></div>
-      <div class='text'>
-        <%= data.stories[i].parts[0] %> <%= data.stories[i].parts[1] %>
-      </div>
+      <a href="archiveStory?id=<%= data.stories[i]._id %>"> <%= data.stories[i].title %></a> <%= data.stories[i].parts[0] %>...<p>
       <% }; %>
+    </div>
   </div>
   <div class="tracker" id="tracked">
     <button type="button" id="homeButton" class="button" style="margin-bottom: 7px;">HOME</button><br/>
