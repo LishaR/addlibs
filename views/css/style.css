@@ -74,26 +74,6 @@ h2 {
 	margin-bottom: 20px;
 }
 
-.button {
-	width: 100px;
-	height: 40px; 
-	color: white; 
-	shadow: none; 
-	border: none;
-} 
-
-.submitButton {
-	font-family: Lusitana;
-	font-size: 30px;
-	color: white;
-	display: inline-block;
-	margin-left: 10px;
-	border: none;
-	width: 7%;
-	height: 50px;
-	border-radius: 15px;
-	background-color: #55ff22;
-}
 
 .counter {
 	font-size: 22px;
@@ -106,16 +86,6 @@ h2 {
 	padding-left: 5px;
 }
 
-.tracker {
-	background: rgb(122, 204, 207);
-	position: absolute;
-	top: 200px;
-	right: 50px;
-	width: 10%;
-	height: 30%;
-	display: inline-block;
-}
-
 .empty {
 	background: rgb(122, 204, 207);
 	width: 100%;
@@ -123,9 +93,7 @@ h2 {
 	display: inline-block;
 }
 
-#archiveButton {
-	background: #55ff22;
-}
+
 
 #newStory {
 	background: #0099cc;
