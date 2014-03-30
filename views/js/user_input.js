@@ -13,8 +13,11 @@ $(document).ready(function() {
 	});
 
 	$("#newStory").click(function(event) {
-		console.log("send to new");
 		sendToNew();
+	});
+
+	$("#submitNewStory").click(function(event) {
+		submitNewStory();
 	});
 
 	// Links to archive when archive button is clicked
@@ -66,9 +69,6 @@ $(document).ready(function() {
 	$("#homeButton").mouseout(function() {
 		$(this).css("background-color","rgb(109, 108, 108)");
 	})
-
-	// Hides the submit button and show character counter by default
-	hideSubmitButton();
 });
 
 // Appends inputBox text to story paragraph
@@ -79,7 +79,11 @@ function sendToStory() {
 	});
 }
 
-function buttonColorChange() {};
+function submitNewStory() {
+	$.get( "/create" + "?title=" + $("#titleBox").val() + "&part=" + $("#inputBox").val(), null, function(data) {
+		goToHome();
+	});
+}
 
 // Updates the character counter, or displays / hides sendButton
 function updateCharacterCounter() {
@@ -89,9 +93,7 @@ function updateCharacterCounter() {
 
 // Links to home page
 function goToHome() {
-	$.get( "/", null, function(data) {
-		window.location.href = "/";
-	});
+	window.location.href = "/";
 } 
 
 // Links to a completed story, provided a given id
