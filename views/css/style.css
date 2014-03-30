@@ -58,7 +58,8 @@ h2 {
 	margin-right: auto;
 	margin-left:  auto;
 	margin-bottom:30px;
-	text-align: center;
+	text-align:   left;
+	text-indent:  30px;
 	font-family: Lusitana;
 	font-size: 30px;
 }
