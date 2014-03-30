@@ -60,11 +60,11 @@ $(document).ready(function() {
 	});
 
 	$("#homeButton").mouseenter(function() {
-		$(this).css("background-color","#015774");
+		$(this).css("background-color","rgb(41, 40, 40)");
 	})
 
 	$("#homeButton").mouseout(function() {
-		$(this).css("background-color","#000000");
+		$(this).css("background-color","rgb(109, 108, 108)");
 	})
 
 	// Hides the submit button and show character counter by default

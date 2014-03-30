@@ -20,6 +20,9 @@
 	color: white; 
 	shadow: none; 
 	border: none;
+	
+	cursor: pointer; 
+	cursor: hand;
 } 
 
 .submitButton {
