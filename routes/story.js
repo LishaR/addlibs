@@ -4,7 +4,6 @@
  var passport = require('passport')
  , oauthorize = require('oauthorize')
  , login = require('connect-ensure-login')
- , hashtag = require('./hashtag')
  , async = require('async')
  , sugar = require('sugar');
 
@@ -34,16 +33,21 @@ exports.checkStory = function(req, res) {
 getStory = function(req, res) {
 	req.app.db.models.Story.findOne({locked: false}, function(err, story){
 		if(err) console.log(err);
-		story.locked = true;
-		req.session.storyID = story._id;
-		req.session.save();
-		var data = {};
-		data.title = story.title;
-		data.last = story.last;
-		story.save(function(err, story){
-			if(err) console.log(err);
-			res.render('index', { title: 'Home | AddLibs', data: data});
-		});
+
+		if (!story) {
+			res.render('new', {title: 'Home | AddLibs'});
+		} else {
+			story.locked = true;
+			req.session.storyID = story._id;
+			req.session.save();
+			var data = {};
+			data.title = story.title;
+			data.last = story.last;
+			story.save(function(err, story){
+				if(err) console.log(err);
+				res.render('index', { title: 'Home | AddLibs', data: data});
+			});
+		}
 	});
 };
 
@@ -60,6 +64,14 @@ exports.updateStory = function(req, res) {
 			console.log("finished update");
 			res.json(story);
 		});
+	});
+};
+
+exports.newStory = function(req, res) {
+	req.app.db.models.Story.findOne({_id: req.session.storyID}, function(err, story){
+		if(err) console.log(err);
+		var data = {};
+		res.render('newstory', { title:  'Home | AddLibs', data: data});
 	});
 };
 

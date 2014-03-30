@@ -1,6 +1,6 @@
 /*** TODO -- DATABASE PEOPLE!!! ***/
 
-// Returns all stories the user has recently contributed to
+// Returns all finished stories
 function getFinishedStories() {
 	var fakeArray = new Array();
 	fakeArray[0] = ["Title 1", "First line of Story 1", "id1"];

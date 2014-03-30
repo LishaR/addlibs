@@ -90,7 +90,7 @@ if ('development' == app.get('env')) {
 // Import utilities and configure uri routing
 require('./utilities')(app);
 // require('./lib/passport')(app, passport);
- require('./routes')(app);
+require('./routes')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
