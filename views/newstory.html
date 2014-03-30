@@ -11,22 +11,23 @@
 <body style="background: rgb(122, 204, 207)">
 	<h1> New </h1>
 	<div class="content">
-		<div class="title">
-			<center><input type="text" id="titleBox" class="form" placeholder="Title your story." maxlength="40">
-			<div>
-				<center><input type="text" id="inputBox" class="form" placeholder="Get the story started!" maxlength="40">
-				</div>
-				<div class="forms" style="text-align: center;">
-					<br><button type="button" class="button" id="submitNewStory">SUBMIT</button>
-				</center>
-			</div>
-			<div class="tracker" id="tracked">
-				<button type="button" id="homeButton" class="button" style="margin-bottom: 7px;">HOME</button><br/>
-				<button type="button" id="archiveButton" class="button" style="margin-bottom: 7px;">ARCHIVE</button><br/>
-				<button type="button" id="newStory" class="button" style="margin-bottom: 7px;">START NEW</button>
+		<div style="margin-left:5%">
+			<input type="text" id="titleBox" class="form" placeholder="Title your story." maxlength="40">
+			<div class="forms">
+				<input type="text" id="inputBox" class="form" placeholder="Get the story started!" maxlength="40">
+				<div id="counter" class="counter"> 0 / 40 </div>
 			</div>
 		</div>
+		<div class="forms" style="text-align: center;"><br>
+			<button type="button" class="button" id="submitNewStory">SUBMIT</button>
+		</div>
+		<div class="tracker" id="tracked">
+			<button type="button" id="homeButton" class="button" style="margin-bottom: 7px;">HOME</button><br/>
+			<button type="button" id="archiveButton" class="button" style="margin-bottom: 7px;">ARCHIVE</button><br/>
+			<button type="button" id="newStory" class="button" style="margin-bottom: 7px;">START NEW</button>
+		</div>
 	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="user_input.js"></script> 
 </body>
