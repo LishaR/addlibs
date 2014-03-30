@@ -80,10 +80,34 @@ h2 {
 	border: none;
 } 
 
+.counter {
+	font-size: 22px;
+	color: rgb(145, 27, 27);
+	display: inline-block;
+	/* background: gray; */
+	font-family: Lusitana;
+	font-weight: bold;
+	width: 70px;
+	padding-left: 5px;
+}
+
 #archiveButton {
 	background: #55ff22;
 }
 
 #newStory {
 	background: #0099cc;
+}
+
+.submitButton {
+	font-family: Lusitana;
+	font-size: 30px;
+	color: white;
+	display: inline-block;
+	margin-left: 10px;
+	border: none;
+	width: 7%;
+	height: 50px;
+	border-radius: 15px;
+	background-color: #55ff22;
 }
