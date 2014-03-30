@@ -129,5 +129,3 @@ function showSubmitButton() {
  // function hideSubmitButton() {
  // 	$("#sendButton").hide();
  // 	$("#counter").show();
- }
-
