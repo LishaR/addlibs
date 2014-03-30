@@ -12,10 +12,12 @@
 	<h1> AddLibs </h1>
 	<div class="content">
 		<div class="title">
-			<h2>"<%= data.title %>" so far...</h2>
+			<h2><%= data.title %></h2>
 		</div>
 		<div class="story">
-			<%= data.parts %>
+			<% for (var i = 0; i < data.parts.length; i++) { %>
+			<%= data.parts[i] %> 
+			<% }; %>
 		</div>
 	</div>
 	<div class="tracker" id="tracked">
