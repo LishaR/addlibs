@@ -3,11 +3,12 @@ addlibs
 
 Authors
 ==========================
-Blake Lawson
 David Gilhooley
-Lance Goodridge
-Ben Leizman
+<br>Lance Goodridge
+<br>Blake Lawson
+<br>Ben Leizman
+<br>Lisha Ruan
 
 About
 ===
-Crowd-write a ridiculous story in 40 character chunks.
+Crowd-write a story in 40-character chunks.
