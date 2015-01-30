@@ -17,7 +17,7 @@ var flash = require('connect-flash');
 var app = express();
 
 //mongo uri
-app.set('mongodb-uri', process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://guest:guest@ds045147.mongolab.com:45147/addlibs');
+app.set('mongodb-uri', 'mongodb://localhost');
 
 //setup mongoose
 app.db = mongoose.createConnection(app.get('mongodb-uri'));

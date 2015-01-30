@@ -41,7 +41,7 @@ getStory = function(req, res) {
 		} else {
 			var index = Math.floor(Math.random() * stories.length);
 			var story = stories[index];
-			story.locked = true;
+			//story.locked = true;
 			story.save(function(err, story){
 				if(err) console.log(err);
 				req.session.storyID = story._id;
